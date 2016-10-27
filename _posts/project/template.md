@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 匠心
+title: 成果
 category: project
-description: Dinge von Hand gemacht.
+description: empty template
 ---
 # [{{ page.title }}][1]
-2015-12-12 By {{ site.author_info }}
+2016-10-26 By {{ site.author_info }}
 
 
-[Mukosame]:    http://mukosame.github.io  "Mukosame"
+[dailc]:     https://dailc.github.io/  "dailc"
 [1]:    {{ page.url}}  ({{ page.title }})
