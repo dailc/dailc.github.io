@@ -1,12 +1,13 @@
 ---
 layout: post
-title: 只言
-description: Die Liebe zu Welt.
-category: blog
+title:博客
+category: blog 
+description: empty template
+
 ---
 
 
 
 
 
-[Mukosame]:    http://mukosame.github.io  "Mukosame"
+[dailc]:     https://dailc.github.io/  "dailc"

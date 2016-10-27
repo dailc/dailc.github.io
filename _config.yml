@@ -5,7 +5,7 @@ highlighter: 'rouge'
 #paginate: 8
 permalink: /:title
 
-title: Dailc Hamster
+title: Dailc Blog
 url: https://dailc.github.io/
 feed: /atom.xml
 author_info: <a href="https://dailc.github.io/">dailc</a>

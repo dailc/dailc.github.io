@@ -3,6 +3,7 @@ layout: default
 ---
 
 <link rel="stylesheet" href="/js/prettify/prettify.css" />
+ <style>{% include post.css %}</style>
 <style type="text/css">
     body { background:#e8e8e8; }
     @media screen and (max-width: 750px){
@@ -16,8 +17,43 @@ layout: default
 <div id="content">
     <div class="entry">
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+
+<section class="meta">
+  <span class="time">
+    <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+  </span>
+  {% if page.categories.size != 0 %}
+  | 
+  <span class="categories">
+    分类
+    {% for cat in page.categories %}
+    <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+    {% endfor %}
+  </span>
+  {% endif %}
+  {% if page.tags.size != 0 %}
+  | 
+  <span class="tags">
+    标签
+    {% for tag in page.tags %}
+    <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+    {% endfor %}
+  </span>
+  {% endif %}
+</section>
+
         {{ content }}
+
+<section align="right">
+  <br/>
+  <span>
+    <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
+    &nbsp;&nbsp;&nbsp;
+    <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
+  </span>
+</section>
+
+
     </div>
 
     <div class="sidenav">
@@ -28,22 +64,23 @@ layout: default
         {% endfor %}
         </ul>
 
-        <h2>Dump</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.dump%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-
         <h2>Project</h2>
         <ul class="artical-list">
         {% for post in site.categories.project%}
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
+
+        <h2>Favour</h2>
+        <ul class="artical-list">
+        {% for post in site.categories.favour%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
     </div>
 </div>
 
+<div id="duoshuo-container">
 <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="https://dailc.github.io/{{ page.url }}"></div>
 <!-- 多说评论框 end -->
@@ -60,5 +97,12 @@ var duoshuoQuery = {short_name:"dailc"};
 	})();
 	</script>
 <!-- 多说公共JS代码 end -->
-
+</div>
+      <footer class="footer">
+        <p><small>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2014 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
+        </small></p>
+         <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+      </footer>
 <script src="/js/post.js" type="text/javascript"></script>

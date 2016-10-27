@@ -1,0 +1,35 @@
+header {
+padding: .5em 0;
+border-bottom: 1px solid #cccccc;
+}
+h1 {
+font-family: "Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+font-size: 1.6em;
+color: #000;
+}
+header h1 {
+
+}
+.post {
+padding: .5em 0em;
+}
+li {
+padding: .2em 2em;
+}
+#container {
+width: 850px;
+margin: 2em auto;
+display: block;
+padding: 0 2em;
+}
+
+#tag_cloud{margin-bottom: 1em;}
+#tag_cloud a:hover{color:#333333 !important;text-decoration:none;}
+.listing-item,.listing-seperator{list-style-type:none;}
+.listing-item a{
+        padding:.2em 1em;
+
+}
+
+.listing-item time{color:#999999;}
+.listing-seperator{font-weight:bold;}
