@@ -24,10 +24,10 @@ layout: home
     <div class="aside">
  <div class="info-card">
         <h1>DaiLc</h1>
- <a href="https://dailc.github.io/" target="_blank"><img src="https://github.com/favicon.ico" alt="" width="22"/></a>
- <a href="" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-        <a href="" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-       
+ <a href="https://github.com/dailc" target="_blank"><img src="https://github.com/favicon.ico" alt="" width="22"/></a>
+ <a href="http://weibo.com/dailichun" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+ <a href="http://5sing.kugou.com/54188866/default.html" target="_blank"><img src="http://5sing.kugou.com/favicon.ico" alt="" width="22"/></a>
+     
        
       </div>
       <div id="particles-js"></div>
