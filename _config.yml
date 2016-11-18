@@ -1,12 +1,30 @@
 auto: true
 
-#markdown: rdiscount
+markdown: kramdown
 highlighter: 'rouge'
-#paginate: 8
-permalink: /:title
+# paginate 分页
+gems: [jekyll-paginate]
+paginate: 6
+permalink: /:year/:month/:day/:title
 
-title: Dailc Blog
+feed: /feed.xml
+bookTag: book
+# excerpt 前期考虑用excerpt作为文章摘要,后面发出会影响统一样式，于是放弃了
+#excerpt_separator: "\n\n\n\n"
+#多说插件使用自己的 short_name
+duoshuo_shortname: dailc
+#百度统计标识
+baidu_analytics_id: cf8506e0ef223e57ff6239944e5d46a4
+
 url: https://dailc.github.io/
-feed: /atom.xml
+title: Dailc的个人主页
+description: 记录个人成长的点点滴滴
 author_info: <a href="https://dailc.github.io/">dailc</a>
-
+author :
+  name : Lichun Dai
+  nickName : 撒网要见鱼
+  intro: 单线程生物，无法同时专注于多件事情。做自己感兴趣的工作，目前偏爱前端。业余爱好:口琴、吉他。
+  email : dailichun@aliyun.com
+  github : dailc
+  githubUrl: https://github.com/dailc
+  

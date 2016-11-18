@@ -1,0 +1,48 @@
+
+				 	<a  class="member-image">
+				 			<img src="/asserts/images/img_avatar.jpg" alt="Lichun Dai"/>
+				 	</a>
+				 	<div class="member-info">
+				 		<p class="info-name">
+				 		<a >
+				 			{{site.author.name}}
+				 		</a>
+				 		</p>
+				 		<p>
+				 			{{site.author.intro}}
+				 		</p>
+				 	<p class="info-foot">
+				 		<a class="left-card left">
+				 			<em>
+				 				博客
+				 			</em>
+				 			<strong>
+				 				{{site.categories.blog.size}}
+				 				
+				 			</strong>
+				 		</a>
+				 		<a class="middle-card left">
+				 			<em>
+				 				项目
+				 			</em>
+				 			<strong>
+				 				{{site.categories.project.size}}
+				 			</strong>
+				 		</a>
+				 		<a class="right-card left">
+				 			<em>
+				 				爱好
+				 			</em>
+				 			<strong>
+				 				{{site.categories.favour.size}}
+				 			</strong>
+				 		</a>
+				 	</p>
+				 	<p class="info-social-touch">
+				 		<a target="_blank" href="https://github.com/dailc" ><img src="https://github.com/favicon.ico" alt="GitHub"/> </a>
+						<a target="_blank" href="http://5sing.kugou.com/54188866/default.html"><img src="http://5sing.kugou.com/favicon.ico" alt="5sing" /> </a>	
+						<a target="_blank" href="http://changba.com/u/200945262"><img src="http://changba.com/favicon.ico" alt="唱吧" /> </a>
+						<a target="_blank" href="https://www.zhihu.com/people/dailichun"><img src="https://www.zhihu.com/favicon.ico" alt="知乎" /> </a>
+						<a target="_blank" href="http://weibo.com/dailichun"><img src="http://www.weibo.com/favicon.ico" alt="微博" /> </a>
+				 	</p>
+				 	</div>

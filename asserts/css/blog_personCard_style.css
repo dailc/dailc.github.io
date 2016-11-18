@@ -1,0 +1,192 @@
+/*
+ * 个人面板的几种风格
+ * 分别利用不同的css动画
+ * 参考 jQuery上的代码
+ * @author dailc
+ */
+
+/*
+ *******右侧人物面板 通用样式******
+ */
+.person-card {
+	position: relative;
+}
+/*图片*/
+.member-image img {
+	width: 100%;
+	vertical-align: bottom;
+}
+.member-info {
+	padding: 5px;
+	background: #fff;
+}
+/*社交相关*/
+.info-social-touch {
+	left: 0;
+	bottom: 0;
+	float: left;
+	width: 100%;
+	padding: 5px 0;
+	margin-top:10px;
+	overflow: hidden;
+	transition: 0.4s;
+}
+.info-social-touch a {
+	display: inline-block;
+	width: 27px;
+	height: 26px;
+	margin: 0 2px;
+	vertical-align: middle;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+.info-social-touch a img {
+	width: 100%;
+}
+.info-social-touch a:hover {
+	opacity: 1;
+	transition: 0.3s;
+}
+/*随笔，关注等*/
+.info-foot {
+	margin: 0;
+	border-top: 1px solid #eff3f5;
+	overflow: hidden;
+}
+.left-card,
+.middle-card,
+.right-card {
+	display: block;
+	width: 33.3%;
+	height: 55px;
+	background-color: #f8f8f8;
+	border: 1px solid #eff3f5;
+	text-align: center;
+}
+.info-foot a:focus,
+.info-foot a:hover {
+	text-decoration: none;
+}
+.info-foot a strong {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	color: #34495e;
+}
+.info-foot a em {
+	display: block;
+	padding-top: 5px;
+	font-size: 12px;
+	color: #acbbc6;
+}
+/*姓名*/
+.info-name {
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.info-name a {
+	color: #767676;
+	text-decoration: none;
+}
+
+
+/*
+ ****** 效果1,效果2******
+ */
+.effect1,.effect2,.effect3,.effect4 {
+	max-height: 320px; 
+	min-height: 320px; 
+	overflow: hidden;
+}
+.effect1 .member-image,
+.effect2 .member-image {
+	display: inline-block;
+	float: none;
+	width: 100%;
+	height: 212px;
+	vertical-align: middle;
+	border-bottom: 5px solid #e74c3c;
+	overflow: hidden;
+	transition: 0.4s;
+}
+.effect1 .member-info,
+.effect2 .member-info {
+	transition: 0.4s;
+}
+.effect1:hover .member-image {
+	height: 81px;
+	transition: 0.4s;
+}
+.effect2:hover .member-image {
+	display: inline-block;
+	width: 109px;
+	height: 81px;
+	border-bottom: 0; 
+	border-radius: 0 0 50px 50px;   
+	overflow: hidden;  
+	transition: 0.4s;
+}
+
+/*
+ ******效果3*****
+ */
+.effect3 {
+	max-height: 300px; 
+	min-height: 300px; 
+	perspective: 800px;
+}
+.effect3 .member-info {
+	position: relative;
+	height: 288px; 
+	transition: 0.4s; 
+}
+.effect3 .member-image {
+	position: absolute; 
+	left: 0;
+	bottom: 0; 
+	width: 100%; 
+	transition: 0.4s; 
+	z-index: 1;
+}
+.effect3 .member-image img {
+	transition: 0.4s;
+	width: 100%;  
+	height: 100%;
+}
+.effect3:hover .member-image {
+	transform: translateY(100%); 
+	transition: 0.4s;
+}
+/*
+ ****** 效果4 ***** 
+ */
+.effect4 .member-info {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 120px; 
+	transition: 0.3s; 
+	z-index: 2;
+}
+.effect4 .member-image{
+	position: relative;
+	float: left;
+	margin-top: 120px;  
+	width: 100%;  
+	overflow: hidden;
+	transition: 0.3s; 
+	z-index: 4; 
+}
+.effect4:hover .member-info{
+	height: 245px; 
+	border-radius: 0 0 50% 50%; 
+	overflow: hidden;
+	transition: 0.3s; 
+	z-index: 6; 
+}
+.effect4:hover .member-image{
+	border-radius: 0;
+	transition: 0.3s; 
+}

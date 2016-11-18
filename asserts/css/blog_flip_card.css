@@ -1,0 +1,122 @@
+/*
+ * flip card样式
+ * jq animate里面的flip效果
+ */
+.in {
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 350ms;
+	animation-timing-function: ease-out;
+	animation-duration: 350ms;
+	
+}
+.out {
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 225ms;
+	animation-timing-function: ease-in;
+	animation-duration: 225ms;
+}
+/* The properties in this rule are only necessary for the 'flip' transition.
+ * We need specify the perspective to create a projection matrix. This will add
+ * some depth as the element flips. The depth number represents the distance of
+ * the viewer from the z-plane. According to the CSS3 spec, 1000 is a moderate
+ * value.
+ */
+.viewport-flip {
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	position: absolute;
+}
+.flip {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+	backface-visibility: hidden;
+	transform: translateX(0);
+}
+.flip.out {
+	-webkit-transform: rotateY(-90deg) scale(.9);
+	-webkit-animation-name: flipouttoleft;
+	-webkit-animation-duration: 175ms;
+	transform: rotateY(-90deg) scale(.9);
+	animation-name: flipouttoleft;
+	animation-duration: 175ms;
+}
+.flip.in {
+	-webkit-animation-name: flipintoright;
+	-webkit-animation-duration: 225ms;
+	animation-name: flipintoright;
+	animation-duration: 225ms;
+}
+.flip.out.reverse {
+	-webkit-transform: rotateY(90deg) scale(.9);
+	-webkit-animation-name: flipouttoright;
+	transform: rotateY(90deg) scale(.9);
+	animation-name: flipouttoright;
+}
+.flip.in.reverse {
+	-webkit-animation-name: flipintoleft;
+	animation-name: flipintoleft;
+}
+@-webkit-keyframes flipouttoleft {
+    from { -webkit-transform: rotateY(0); }
+    to { -webkit-transform: rotateY(-90deg) scale(.9); }
+}
+@keyframes flipouttoleft {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(-90deg) scale(.9); }
+}
+@-webkit-keyframes flipouttoright {
+    from { -webkit-transform: rotateY(0) ; }
+    to { -webkit-transform: rotateY(90deg) scale(.9); }
+}
+@keyframes flipouttoright {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(90deg) scale(.9); }
+}
+@-webkit-keyframes flipintoleft {
+    from { -webkit-transform: rotateY(-90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@keyframes flipintoleft {
+    from { transform: rotateY(-90deg) scale(.9); }
+    to { transform: rotateY(0); }
+}
+@-webkit-keyframes flipintoright {
+    from { -webkit-transform: rotateY(90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@keyframes flipintoright {
+    from { transform: rotateY(90deg) scale(.9); }
+    to { transform: rotateY(0); }
+}
+
+/*
+ * flip动画相关-右侧卡片
+ */
+.flip-container {
+	position: relative;
+	width: 100%;
+	min-height: 292px;
+	margin-top: 100px;
+	margin-left: 10px;
+	
+}
+.flip-container .viewport-flip {
+	width: 100%;
+}
+.flip-item {
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.flip-item img {
+	width: 100%;
+}
+/*card-container,介绍自己的卡片
+ */
+.card-container {
+	background: transparent;
+}
+.card-container .content-container {
+	padding: 0;
+}

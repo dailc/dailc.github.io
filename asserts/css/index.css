@@ -1,0 +1,83 @@
+/**
+ * 博客首页样式
+ * @author dailc
+ */
+.content-container {
+	padding: 0;
+}
+/*标题*/
+.blog-content {
+	margin: 10px 0 10px 0;
+	padding: 30px;
+	border-bottom: 1px solid #eee;
+}
+.blog-content .post-title {
+	margin-bottom: 0.5em;
+	border-bottom: 0;
+}
+.blog-content a{
+	position: relative;
+	color: #555;;
+	text-decoration: none;
+	transition: 500ms ease;
+}
+.blog-content a:hover {
+	color: #000;
+}
+.meta a {
+	color: #4A75B5;;
+}
+.meta a:hover {
+	color: #23527c;
+}
+.post-title:hover a::before{
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+.blog-content a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #555;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+.blog-content .meta {
+	padding: 0;
+}
+
+/*
+ * 分页
+ */
+.pagination {
+	position: relative;
+	width: 100%;
+	padding: 20px 10px;
+	line-height: 20px;
+	border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden; 
+}
+.pagination .prev,
+.pagination .next {
+	font-weight: bold;
+}
+.pagination .prev {
+	float: left;
+}
+.pagination .next {
+	float: right;
+}
+.pagination .center {
+    margin: auto;
+    text-align: center;
+    width: 80px;
+}
+

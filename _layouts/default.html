@@ -1,62 +1,101 @@
+<!-- 
+        作者：dailc
+        时间：2016-10-30
+        描述：  博客页面，简洁样式，动态侧边栏目录树
+        参考: Thomas Zhao's Blog,http://www.ezlippi.com/
+       同时兼容移动端，不考虑ie兼容,不引人第三方库
+    Refer:  https://github.com/dailc/dailc.github.io
+-->
 <!DOCTYPE html>
 <html>
 <head>
-    <!--
-    * Author:         dailc
-    * Refer:        Mukosame,http://beiyuu.com/,http://github.thinkingbar.com/
-    -->
     <meta charset="utf-8" />
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="author" content="dailc" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="Everything about dailc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
- <style>{% include index.css %}</style>
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  	<link href="/asserts/css/default.css" rel="stylesheet" type="text/css" media="all">
+	<script type="text/javascript" src="/asserts/js/app.js" ></script> 
 </head>
 <body>
-<!--
-    <div class="home-menu">
-        <div class="home-icon-con">
-            <a class="home-menu-icon" href="/">dailc</a>
-            <a class="home-follow" href="#" title="Contact Me">+</a>
-        </div>
-        <div class="home-contact">
-            <a href="https://dailc.github.io/" target="_blank" style="margin-left:-5px;"><img src="https://github.com/favicon.ico" alt="" width="22"/></a>
-            <a href="" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-            <a href="" target="_blank" style="text-align:right"><img src="http://www.zhihu.com/favicon.ico" alt="" width="22"/></a>
-        </div>
-    </div>
--->
-    {{ content }}
-
-
-    <script type="text/javascript">
-        $(function(){
-            $('.home-follow').click(function(e){
-                e.preventDefault();
-
-                if($('.home-contact').is(':visible')){
-                    $('.home-contact').slideUp(100);
-                }else{
-                    $('.home-contact').slideDown(100);
-                }
-            });
-        })
-    </script>
+	<!--头部 -->
+	<header class="header">
+		<div class="header-container">
+			<section class="site-logo">
+				<a  href="/">{{ site.author.nickName }}</a>
+			</section>
+			<button class="collapsed " type="button" >
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+		    <div class="menu-container">
+				<nav class="site-nav">
+					<ul>
+						<li>
+							<a  href="/blog/archive.html">随笔</a>
+						</li>
+						<li>
+							<a  href="/blog/categories.html">分类</a>
+						</li>
+						<li>
+							<a  href="/blog/tags.html">标签</a>
+						</li>
+						<li>
+							<a  href="/demo/demo.html">Demo</a>
+						</li>
+						<li>
+							<a  href="/favour/music.html">音乐</a>
+						</li>
+						<li>
+							<a  href="/favour/book.html">Book</a>
+						</li>
+						<li>
+							<a  href="/about/timeline.html">时间轴</a>
+						</li>
+						<li>
+							<a  href="/about/about.html">关于</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="site-search">
+					<input type="text" />
+				</div>
+			</div>
+		</div>
+	</header>
+	{{content}}
+	
+	<!-- 脚步,包括版权声明，访问次数等-->
+	<footer class="footer">
+	    <p class="copyright">
+	    	<small>
+	            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2016&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about/">{{site.author.name}}</a>
+	        </small>
+	    </p>
+	    <p class="more-tips">
+	    	<span>Powered by Jekyll</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<span id="busuanzi_container_site_pv">总访客<span id="busuanzi_value_site_uv" class="site-uv"></span>人</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<span id="busuanzi_container_site_pv">总访问<span id="busuanzi_value_site_pv" class="site-pv"></span>次</span>
+	    </p>  
+	</footer>
+{% if site.baidu_analytics_id %}
 <script>
+//百度统计
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?39f7d929137934a63603bd3a93fe3cd8";
+  hm.src = "//hm.baidu.com/hm.js?{{site.baidu_analytics_id}}";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
- 
+{% endif %}
+<!--不蒜子 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 
 </body>

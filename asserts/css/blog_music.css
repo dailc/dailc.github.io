@@ -1,0 +1,118 @@
+/**
+ * 博客音乐页面
+ * @author dailc
+ */
+.content-container {
+	overflow: hidden;
+}
+/*music-card*/
+.music-card {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	overflow: hidden;
+}
+.music-card  img{
+	width: 200px;
+	height: 200px;
+}
+.music-card .member-info {
+	position: absolute;
+	left: 0;
+	top: 160px;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	transition: 0.5s ease;
+}
+.music-card:hover .member-info{
+	top: 0;
+	transition: 0.5s ease;
+}
+.music-card:hover .play-widget {
+	opacity: 1;
+	transition: 0.5s ease;
+}
+.music-card .member-info .title {
+	display: block;
+}
+.music-card .member-info .author:before {
+	content: '一 ';
+}
+.music-card .member-info p {
+	font-size: 14px;
+}
+/*被锁住的样式*/
+.locked img {
+	-webkit-filter: blur(2px);
+}
+.locked .play-widget {
+	opacity: 1;
+}
+/*播放按钮*/
+.play-widget {
+	position: absolute;
+	left: 42%;
+	top: 40%;
+	opacity: 0;
+	transition: 0.5s ease;
+}
+.play-widget .circle2 {
+	border-color: rgba(255,255,255,.6);
+}
+.play-widget .play {
+	border-left: 25px solid rgba(255,255,255,.6);
+}
+.play-widget .pause1,
+.play-widget .pause2 {
+	background: rgba(255,255,255,.6);
+}
+/*底部播放器*/
+.my-player {
+	position: fixed;
+	bottom: -80px;
+	left: 0;
+	width: 100%;
+	
+	z-index: 99;
+	transition: 0.5s ease;
+}
+.my-player:hover,
+.locked-player {
+	bottom: 0;
+	transition: 0.5s ease;
+}
+.my-player .aplayer {
+	background: #fff;
+}
+.empty-container {
+	height: 60px;
+	background: transparent;
+}
+
+.demo-container {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px
+}
+a,a:focus,a:hover {
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.container {
+    	width: 90%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container {
+    	width: 100%;
+	}
+}

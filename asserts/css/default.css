@@ -1,0 +1,663 @@
+/**
+ * 默认的样式,整合reset,header_footer,markdownarticle,post,blog_borderEffeft的布局
+ * @author dailc
+ */
+
+/********************************reset相关********************************
+ * 参考了bootstrap源码
+ * ******/
+/************重置浏览器CSS ************/
+/*
+ *  content-box(css2定位行为)，这时候在宽度和高度之外绘制元素的内边距和边框。
+ *  border-box 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+ *  所有最好用border-box,便于计算，否则会出现误差
+ */
+* {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{color:#000;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body,button,input,select,textarea{font-size:12px/1.5;}
+input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:inherit;}
+fieldset,img,a img{border:0;}
+iframe{display:block;}
+abbr,acronym{border:0;font-variant:normal;}
+del{text-decoration:line-through;}
+address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:500;}
+ol,ul {list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+q:before,q:after {content:'';}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{zoom:1;}
+body .hide{display:none;}
+.left,.right{display:inline;}
+.left{float:left;}
+.right{float:right;}
+
+/***********default settings**********/
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;}
+a {color:#4A75B5;;;text-decoration:none;outline:none;}
+a:hover, a:focus {color: #23527c;text-decoration: underline;cursor: pointer;}
+a:active, a:hover {outline: 0;}
+a.external {padding-right:13px;background:url('/images/icons.gif') no-repeat right 1px;}
+a.external:hover {background-position:right -15px;}
+/*各大标题的样式,仿照bootstrap*/
+h1, h2, h3, h4, h5, h6 {font-family: inherit;font-weight: 500;line-height: 1.1;color: inherit;}
+h1,h2,h3 {margin-top: 20px;margin-bottom: 10px;}
+h1 {font-size:36px;font-weight:bold;}
+h2 {font-size:22px;font-weight:bold;}
+h3 {font-size:18px;font-weight:bold;}
+h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
+p { margin: 0 0 10px;line-height:1.8em;}
+blockquote {padding: 10px 20px;margin: 0 0 20px;font-size: 17.5px;border-left: 5px solid #eee;}
+ol,ul {
+    list-style-position: inside;
+    border: rgb(226, 222, 222);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: .3em 0;
+}
+code, kbd, pre, samp {font-family: Menlo,Monaco,Consolas,"Courier New",monospace;}
+code {padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;border-radius: 4px;}
+pre {display: block;padding: 9.5px;margin: 0 0 10px;font-size: 13px;line-height: 1.42857143;color: #333;word-break: break-all;word-wrap: break-word;background-color: #f5f5f5;border: 1px solid #ccc;border-radius: 4px;}
+pre code {padding: 0;font-size: inherit;color: inherit;white-space: pre-wrap;background-color: transparent;border-radius: 0;}
+pre ol {margin-left: 0;list-style-type:decimal;}
+h4+pre, h3+pre { margin-top:20px; }
+sub, sup {position: relative;font-size: 75%;line-height: 0;vertical-align: baseline;}
+sup {top: -.5em;}
+.mt20 {margin-top: 20px;}
+.mt40 {margin-top: 40px;}
+.mt60 {margin-top: 60px;}
+.mt66 {margin-top: 66px;}
+.mt70 {margin-top: 70px;}
+.mt80 {margin-top: 80px;}
+.mt120 {margin-top: 120px;}
+/********************************header和footer相关********************************
+ * 定义header-footer通用样式
+ * ******/
+/******header样式******/
+.header,
+.footer {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+}
+.header-container {
+	width: auto;
+	max-width: 1020px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/*logo*/
+.site-logo,
+.site-nav,
+.site-search {
+	float: left;
+	height: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 40px;
+}
+.site-logo {
+	/*margin-left: 106px;*/
+	margin-right: 40px;
+	padding-left: 10px;
+	font-size: 22px;
+	font-weight: bolder;
+	text-align: center;
+}
+.site-logo a {
+	color:#000;
+}
+/*响应移动端时的按钮,点击按钮可以查看其它导航内容
+ */
+.header .collapsed {
+	display: none;
+	float: right;
+	width: 22px;
+	height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+}
+.header .collapsed .icon-bar {
+	display: block;
+    width: 22px;
+    height: 2px;
+    margin-top: 4px;
+    border-radius: 1px;
+    background-color: #555;
+}
+/*nav*/
+.site-nav {
+	display: block;
+	overflow: hidden;
+}
+.site-nav ul {
+	float: left;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+.site-nav li {
+	display: inline-block;
+}
+.site-nav li a {
+	padding: 0 10px;
+	font-size: 14px;
+	color: #555;
+}
+.site-nav li a {
+	text-decoration: none;
+}
+/* search*/
+.site-search {
+	float: left;
+	margin-left: 40px;
+}
+.site-search input {
+	width: 140px;
+	padding: 3px;
+	padding-left: 18px;
+	background: url(../images/svg_search.svg) no-repeat 0 50%;
+	background-size: 12px 12px;
+	border: none;
+	border-bottom: 1px solid #999;
+	border-radius: 0;
+	outline: none;
+	opacity: 0.5;
+}
+.site-search input:active,
+.site-search input:focus {
+	opacity: 1;
+}
+/******footer样式******/
+.footer {
+	margin-top: 40px;
+}
+.footer .copyright,
+.footer .more-tips {
+	margin-top: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+.footer .copyright a {
+	color: #666;
+}
+.footer .copyright a:hover {
+	text-decoration: none;
+}
+.more-tips .site-uv,
+.more-tips .site-pv {
+	color: #e74c3c;
+}
+@media only screen and (max-width: 768px) {
+	.site-logo {
+		margin-left: 0;
+	}
+	.site-search {
+		margin-left: 10px;
+	}
+	.header .collapsed {
+		display: block;
+	}
+	.site-nav {
+		height: auto;
+		clear: both;
+	}
+	.site-nav ul {
+		float: none;
+	}
+	.site-nav ul li{
+		
+		display: block;
+	}
+	.site-nav, .site-search {
+		float: none;
+	}
+}
+/********************************markdown_article相关********************************
+ * 定义markdown字体的渲染样式
+ * ******/
+/**
+ * 用来定制em相关
+ */
+html,body {
+	font-size: 10px;
+}
+.markdown-body {
+	/*font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;*/
+	font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,"宋体",Helvetica,Tahoma,Arial sans-serif;
+   /* font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;*/
+    /*决定整个文章中字体大小*/
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+	background: #fff;
+}
+/*
+ * 定义各大字体
+ */
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    line-height: 1.4;
+}
+.markdown-body h1 {
+    padding-bottom: 0.3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+.markdown-body h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+/**
+ * 字段
+ */
+.markdown-body ul, .markdown-body ol {
+    padding-left: 2em;
+    list-style-type: disc;
+}
+.prettyprint ul,.prettyprint ol{
+	list-style: none;
+	padding-left: 0;
+}
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.markdown-body li>p {
+    margin-top: 1em;
+}
+/**
+ * 引用
+ */
+
+.markdown-body blockquote {
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+}
+/**
+ * 代码相关
+ */
+
+.markdown-body pre {
+    word-wrap: normal;
+}
+
+.markdown-body code:before, .markdown-body code:after, .markdown-body tt:before, .markdown-body tt:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+}
+
+.markdown-body code, .markdown-body tt {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    /*font-size: 85%;*/
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+}
+
+.markdown-body pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+}
+.markdown-body pre code, .markdown-body pre tt {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+}
+/**
+ * 高亮代码
+ */
+.markdown-body .highlight pre, .markdown-body pre {
+    padding: 1em;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+}
+.markdown-body .highlighter-rouge .highlight {
+    margin-bottom: 1em;
+    border: 3px solid #C0C0C0;
+    border-left-width: 6px;
+    border-left-color: #f0ad4e;
+}
+
+/**
+ * 图片
+ */
+.markdown-body img {
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/********************************post布局相关相关********************************
+ * 这里主要是一些post页面的通用布局,比如container 的自适应样式
+ * ******/
+html,body {
+	margin: 0;
+	padding: 0;
+	background-color: #eff3f5;
+}
+/**
+ * 容器
+ */
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container:before,
+.container:after {
+	display: table;
+	content: " ";
+}
+
+.container:after {
+	clear: both;
+}
+
+
+/**
+ * 文章内容区域
+ * 类似于bt里col-md-9
+ */
+
+.col-md-9,
+.col-md-3 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px
+}
+
+
+/*
+ * 多说内容区域
+ */
+.markdown-body,
+#duoshuo-container,
+.slideNavContainer,
+.person-card {
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+/*
+ * 文章内容
+ */
+
+.markdown-body {
+	margin: 40px 0 60px 0;
+	padding: 0;
+}
+.content-container {
+	padding: 30px;
+}
+
+/*
+ * 右侧toc
+ */
+
+.slideNavContainer,
+.person-card {
+	width: 100%;
+	margin-top: 40px;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+.slideNavContainer ul {
+	border: 0;
+	list-style: none;
+}
+
+.person-card {
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+}
+/*
+ * 定制标题
+ */
+
+.title-container,
+.post-next-prev {
+	font-family: "微软雅黑", "Arial", "Helvetica", "sans-serif";
+}
+
+.title-container {
+	position: relative;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+}
+
+h1[class=page-title] {
+	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 1em;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 2em;
+	border-bottom: 0;
+}
+
+h1[class=page-title] a {
+	font-weight: bold;
+	color: #000;
+	word-wrap: break-word;
+	text-decoration: none;
+}
+
+h1[class=page-title] a:hover {
+	text-decoration: none;
+}
+
+/*
+ * meta标签
+ */
+
+.meta {
+	margin-bottom: 2em;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: .9em;
+	font-style: italic;
+	color: #888;
+}
+/*
+ * 右侧tips
+ */
+
+.right-tips {
+	position: absolute;
+	top: 2em;
+	right: 20px;
+}
+
+.right-tips span {
+	font-size: 1.6em;
+	font-weight: bold;
+	font-style: italic;
+	color: #acbbc6;
+}
+/*
+ * 特别推荐-
+ */
+
+.tag-favour {
+	position: absolute;
+	top: -5px;
+	right: 10px;
+}
+
+.tag-favour img {
+	width: inherit;
+	height: inherit;
+	vertical-align: middle;
+	border: 0;
+}
+/**
+ * 评论 类似于 col-md-3
+ */
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+	.col-md-3 {
+		display: none;
+	}
+	.meta,
+	h1[class=page-title] {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+	.col-md-9 {
+		float: left;
+		width: 75%;
+	}
+	.col-md-3 {
+		display: block;
+		float: left;
+		width: 25%;
+	}
+	.tag-favour {
+		top: 35px;
+		right: 10px;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.col-md-3 {
+		display: none!important;
+	}
+	.container {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+    
+	}
+	.markdown-body {
+		/*缩小整个markdown的字体*/
+		/*font-size: 14px;*/
+		margin-top: 10px;
+	}
+	.col-md-9 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.tag-favour {
+		right: -5px
+	}
+}
+
+
+/*
+ * 小于320的设备
+ */
+
+@media screen and (max-width: 321px) {
+	.markdown-body {
+		/*缩小整个markdown的字体*/
+		font-size: 15px;
+	}
+}
+/********************************通用的border effect********************************
+ * 比如顶部的帽子
+ * ******/
+.border-effect .top-border {
+	position: absolute;
+	top: 460px;
+	left: 10px;
+	width: 100%;
+	padding: 5px;
+	background-color: #e74c3c;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+	transition: 0.4s;
+}
+
+.border-effect .top-border::before {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	content: "";
+	border-right: 15px solid #8f1e13;
+	border-bottom: 8px solid transparent
+}
+
+.border-effect .top-border::after {
+	position: absolute;
+	top: 31px;
+	right: 0;
+	content: "";
+	border-left: 15px solid #8f1e13;
+	border-bottom: 8px solid transparent
+}
+/*被鼠标覆盖的效果*/
+
+.border-effect:hover .top-border {
+	top: 440px;
+	transition: 0.4s;
+}

@@ -1,0 +1,110 @@
+/*
+ * about页面样式
+ * 大部分样式直接 复用前面的post页面
+ * 因为这样便于形成一个统一风格
+ * @author dailc
+ */
+
+body {
+	font-size: 10px;
+}
+ul {
+	border: 0;
+}
+
+.col-md-3 {
+	position: relative;
+}
+
+/*最近博文与背面*/
+
+.recent-blogs {
+	width: 100%;
+	margin-top: 100px;
+	margin-left: 10px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+
+.recent-blogs li {
+	padding: 10px;
+}
+
+
+/*最近博文的border样式
+ * 基于col-md-3定位
+ * 正面
+ */
+.border-effect .top-border {
+	top: 460px;
+}
+.border-effect:hover .top-border {
+	top: 440px;
+}
+
+.recent-blogs .article-list {
+	margin-top: 20px;
+}
+
+
+
+
+
+/*
+ * 定制卡片样式
+ */
+
+.flip-container li {
+	padding: 10px;
+	list-style: none;
+}
+
+.flip-container .flip-item {
+	background: #fff;
+}
+
+.card-container .content-container {
+	min-height: 400px;
+}
+/*
+ * 随笔，作品，爱好
+ */
+
+.essay-container,
+.project-container,
+.favour-container {
+	display: inline-block;
+	width: 30%;
+	height: 100px;
+	min-height: 120px;
+	text-align: center;
+}
+
+.flip-container .number {
+	font-size: 3.8em;
+	font-weight: bold;
+	color: #e74c3c;
+}
+
+.flip-container h2 {
+	margin-bottom: 0;
+}
+
+.flip-container .tips {
+	margin-top: 1em;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 768px) {
+	.essay-container,
+	.project-container,
+	.favour-container {
+		width: 44%;
+	}
+	.card-container .content-container {
+		min-height: 580px;
+	}
+}

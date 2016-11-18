@@ -1,0 +1,75 @@
+/**
+ * 博客书单页面
+ * @author dailc
+ */
+
+.demo-container {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px
+}
+a,a:focus,a:hover {
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.book-read-before,
+.book-read-now,
+.book-read-after {
+	overflow: hidden;
+}
+/*固定书单的长与宽*/
+.book-card {
+	float: left;
+	margin: 10px 20px;
+	padding: 0;
+	
+}
+.book-card .flip-item{
+	background: #eff3f5;
+}
+.read-tag {
+	text-align: center;
+}
+.book-card,
+.book-card img,
+.book-card .flip-item {
+	width: 200px;
+	height: 270px;
+	min-height: 270px;
+	max-height: 270px;
+}
+.book-card .flip-item {
+	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.flip-item:not(.cover-flip-back) {
+	padding: 0;
+}
+.cover-flip-back h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.cover-flip-back p {
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	line-height: 25px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.cover-flip-back .title-en {
+	-webkit-line-clamp: 1;
+}
+@media only screen and (min-width: 768px) {
+	.container {
+    	width: 90%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container {
+    	width: 100%;
+	}
+}

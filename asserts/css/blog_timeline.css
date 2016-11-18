@@ -1,0 +1,195 @@
+/**
+ * 时间轴页面样式
+ * @author dailc
+ */
+/*时光轴容器*/
+.timeline-container {
+	position: relative;
+    width: 100%;
+    margin: 20px auto ;
+    background: url(../images/img_timeline_bg.png) 66px 0px repeat-y;
+    overflow: hidden;
+}
+/*具体某一年的内容*/
+.timeline-date {
+    position: relative;
+    overflow: hidden;
+}
+/*时光轴主要的标记物*/
+.timeline-marker-major {
+	position: absolute;
+	top: 0;
+    left: 31px;
+	width: 64px;
+    height: 64px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 64px;
+    background: #FFFFFF;
+    text-indent: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.timeline-marker-major:hover{
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-webkit-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	border-color:rgba(0,0,0,0);
+}
+.timeline-marker-major:hover {
+	border-color:rgba(255,255,255,0.6);
+	background-color:#6bc30d;
+}
+.timeline-marker-major:hover .clock{
+	display:block;
+	border-radius:83px;
+}
+.timeline-marker-major:hover .major-content{
+	display:none;
+}
+.timeline-marker-major .mask {
+	position: absolute;
+	height: 64px;
+    width: 64px;
+    top: 0;
+    left: 0;
+}
+.timeline-marker-major span {
+	font-size: 18px;
+    color: #b0b0b0;
+}
+.timeblock {
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6bc30d;
+}
+.timeyear {
+    font-size: 14px;
+    line-height: 20px;
+    color: #b0b0b0;
+}
+.timeline-marker-major .clock {
+	position: absolute;
+	top: 0;
+    left: 0;
+    display: none;
+    width: 64px;
+    height: 64px;
+    
+    border-radius: 0;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.timeline-marker-major .clock span {
+	position: absolute;
+	top: 10px;
+	left: 9px;
+	font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.timeline-minor {
+	zoom: 1;
+	padding-top: 10px;
+	
+}
+
+.timeline-minor h3 {
+	display: block;
+	float: left;
+    text-align: right;
+    font-size: 14px;
+    color: rgb(135, 135, 135); 
+}
+.timeline-minor h3 span {
+	display: block;
+	padding-left: 22px;
+	font-size: 12px;
+    color: rgb(173, 173, 173);
+}
+.timeline-event {
+	position: relative;
+	margin-left: 88px;
+	margin-top: 4px;
+}
+.timeline-mark {
+	position: absolute;
+	top: 10px;
+    left: -30px;
+	width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 3px solid #6bc30d;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.curr .timeline-mark,
+.timeline-mark:active {
+	border: 5px solid rgba(107,195,13,0.6);
+	
+}
+.timeline-event .event-title {
+	display: block;
+	float:left
+	margin-left: 18px;
+	padding: 5px 10px;
+	font-size: 16px;
+	color: #333;
+	font-weight: 700;
+	border: 1px solid ;
+	border-color: rgba(0,0,0,.3);
+	border-radius: 5px;
+	transition: .5s ease;
+}
+.closed .event-title {
+	font-size: 14px;
+}
+.curr .event-title,
+.timeline-event .event-title:hover {
+	background: #eee;
+	transition: .5s ease;
+}
+
+.event-content {
+	width: 94%;
+	margin-left: 20px;
+	margin-right: 6%;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.event-content .media {
+	float: right;
+	width: 240px;
+	overflow: hidden;	
+}
+.media img {
+	
+	width: 240px;
+	max-width: 96%;
+	margin-right: 4%;
+	border-radius: 8px;
+}
+.event-content p {
+	clear: left;
+	float: left;
+	width: 500px;
+	max-width: 100%;
+	margin: 6px 0 10px;
+}
+@media screen and (max-width: 768px) {
+	.event-content .media {
+		float: left;
+		width: 100%;
+		overflow: hidden;	
+	}
+}

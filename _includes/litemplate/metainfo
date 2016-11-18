@@ -1,0 +1,28 @@
+<section class="meta clearfix">
+<span class="time">
+<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+</span>
+{% if page.categories.size != 0 %}
+| 
+<span class="categories">
+	分类
+	    {% for cat in page.categories %}
+	    <a href="/blog/categories.html#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+	    {% endfor %}
+</span>
+{% endif %}
+{% if page.tags.size != 0 %}
+| 
+<span class="tags">
+	标签
+		{% for tag in page.tags %}
+		<a href="/blog/tags.html#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+		{% endfor %}
+</span>
+{% endif %}
+| 
+<span class="views">
+	浏览
+	<a id="busuanzi_value_page_pv"></a>&nbsp;
+</span>
+</section>

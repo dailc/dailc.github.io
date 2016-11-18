@@ -2,8 +2,10 @@
 layout:     post
 title:      jekyll博客搭建之艰辛之路
 category: blog
-tags: jekyll
-description: 关于jekyll博客的捣鼓的过程分享
+tags: 经验分享 jekyll
+favour: jekyll
+star: true
+description: 关于jekyll博客的捣鼓的过程分享，包括搭建jekyll博客的心路历程，jekyll博客的搭建过程等
 ---
 
 ## 前言
@@ -25,6 +27,8 @@ description: 关于jekyll博客的捣鼓的过程分享
 **说明，本文只关注如何在本机运行起来jekyll博客，至于如何用github pages托管jekyll博客，相对简单，就不再赘述了**
 
 *另外，其实最近hexo也挺好的，只不过不是本文关注的内容*
+
+
 ## 搭建jekyll前需要知道的一些知识
 磨刀不误砍柴功，理清楚以下关系后，对搭建jekyll是有好处的，方便自查可能的错误原因
 ### ruby与ruby gem的关系
@@ -223,10 +227,10 @@ ln -sf irb2.0 irb
 ln -sf rake2.0 rake
 ln -sf rdoc2.0 rdoc
 ln -sf testrb2.0 testrb
-
 ```
 
 替换完成之后先更换官方源，参考[**windows下更换gem source*(在上文)***](#rubychangeresource)。之后更新下gem
+
 ```
 gem update --system
 gem pristine --all

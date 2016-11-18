@@ -1,0 +1,104 @@
+/*
+ * 博客归档页面
+ * @author dailc
+ */
+
+
+ul {
+	border: 0;
+}
+.col-md-3 {
+	position: relative;
+}
+/******右侧的栏目******/
+.border-effect .top-border {
+	top: 40px;
+	z-index: 1;
+}
+.border-effect:hover .top-border {
+	top: 20px;
+}
+
+/*归档toc*/
+.atchive-toc {
+	width: 100%;
+	margin: 40px 0 0 10px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+
+
+.catgory-container {
+	font-size: 1.5em;
+}
+.catgory-container .list {
+	margin-top: 30px;
+	padding: 0;
+}
+
+.catgory-container .list .list-item{
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.catgory-container .list .list-item a {
+	font-weight: bold;
+}
+.catgory-container .list .list-item .badge {
+	float: right;
+}
+.badge {
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #e74c3c;;
+    border-radius: 10px;
+}
+/******左侧的内容******/
+.post-list {
+	padding-left: 2em;
+}
+.post-list-item {
+	margin: 10px;
+    padding: 5px 0;
+	border-bottom: 1px dashed #ccc;
+}
+.post-list-item .item-meta,
+.post-list-item .item-tag {
+	display: inline-block;
+	margin-right: 0.3em;
+    font-family: 'lucida grande', 'lucida sans unicode', lucida, 'Helvetica Neue', helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+	font-size: 0.6em;
+    color: #939aa1;
+}
+.post-list-item .item-tag {
+	float: right;
+    font-weight: normal;
+    font-size: 0.6em;
+}
+.post-list-item a {
+	margin-right: 3px;
+	font-size: 1em;
+	font-weight: bold;
+    color: #555;
+    
+}
+.post-list-item a:link,
+.post-list-item a:visited,
+.post-list-item a:active {
+	transition: all 0.4s linear 0s;
+}
+.post-list-item a:hover {
+	padding-left: 10px;
+	
+}

@@ -1,0 +1,78 @@
+---
+layout: default
+---
+		
+
+<link href="/asserts/css/blog_archive.css" rel="stylesheet" />	
+	<div class="wrap">
+		<div class="container">
+			<!-- 左侧，内容，多说评论等-->
+			<div class="col-md-9">
+				<!-- 内容-->
+				<div class="markdown-body">
+					<!--标题区域 -->
+					<div class="title-container">
+					<h1 class="page-title"><a  title="about"></a> </h1>	
+						<section class="right-tips">
+							<span >
+								categories
+							</span>
+						</section>
+					</div>
+					<!-- 特别推荐-->
+					<div class="tag-favour">
+						<img src="/asserts/images/img_favour_star_1.png" />
+					</div>
+					<!-- 内容区域-->
+					<div class="content-container">
+						
+					{% for cat in site.categories %}
+					<h3 id="{{ cat[0] }}">{{ cat[0] }}</h3>
+					
+					<ul class="post-list">
+					    {% for post in cat[1] %}
+					    <li class="post-list-item">
+							<span class="item-meta">
+								{{ post.date | date:"%Y-%m-%d" }}
+							</span>
+							<a  href="{{ site.url }}{{ post.url }}" class="item-name">{{ post.title }}</a>
+							<span class="item-tag">
+								 {{ post.tags | first }}
+							</span>
+					 	</li>
+					    {% endfor %}
+					</ul>    
+					{% endfor %}
+										
+					</div>	
+				</div>
+				
+				
+				<!-- 多说-->
+				{% include litemplate/duoshuo %}
+				
+				
+			</div>
+			
+			<!-- 右侧包括个人介绍，TOC菜单-->
+			<div class="col-md-3">
+				<!-- 右侧人物面板-->
+				<div class="atchive-toc catgory-container border-effect">
+					<div class="top-border">
+				 		分类
+				</div>
+				<ul class="list">
+					{% for cat in site.categories %}
+						<li class="list-item">
+							<a  href="#{{ cat[0] }}">{{ cat[0] }}</a>
+							<span class="badge">{{ cat[1].size }}</span>
+						</li>
+					{% endfor %}					
+				</ul>
+				</div>
+						
+			</div> 
+ 
+		</div>
+	</div>
+<script type="text/javascript" src="/asserts/js/archive.js" ></script>				

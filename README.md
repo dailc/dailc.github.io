@@ -1,9 +1,19 @@
-#一点点说明
+# 博客说明
+在最初参考了很多jekyll博客模板后，最终决定自己动手做自己的博客，于是自己从头开始搭建
+现在进度还有一部分未完成，但基本功能已经都有了。
 
-* 参考[mukosame.github.io](http://mukosame.github.io)的示例代码
+另外，本博客所有代码都是从头开始写的，相关引用参考已在代码中说明
 
-* 参考[http://beiyuu.com/](http://beiyuu.com/)的示例代码
+后续全部完成后再补充简介
 
-* 参考[飘过的小牛](http://github.thinkingbar.com/)的源码
+## 参考的博文
+本次博客主要参考了以下博文(感谢相关博主)
+
+
+* 参考[HyG ](https://gaohaoyang.github.io)的博客风格以及demo页面灵感
+
+* 参考[Yong Yuan](http://yongyuan.name/)的时间轴灵感
+
+* 使用[haorooms](http://www.haorooms.com/)的h5播放器，并自己进行了拓展
 
 * 正在完善中...

@@ -1,0 +1,76 @@
+/**
+ * 文章发表页面样式
+ * @author dailc
+ */
+
+
+
+/*
+ * 右侧的toc栏目和personcard栏目
+ */
+
+/*
+ * 右侧toc
+ */
+
+.toc-sidenav a {
+	display: block;
+	padding: 4px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #767676;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/*鼠标覆盖的a标签*/
+
+.toc-sidenav a:hover {
+	color: #563d7c;
+	text-decoration: none;
+	background-color: transparent;
+	border-left: 1px solid #563d7c;
+}
+
+
+/*激活的a标签*/
+
+.toc-sidenav .active a {
+	font-weight: bold;
+	color: red;
+	background-color: transparent;
+	border-left: 2px solid #563d7c;
+}
+
+.toc-sidenav .h3 a {
+	padding-left: 30px;
+	font-size: 14px;
+}
+
+/*
+ * 返回顶部
+ */
+.slideNavContainer .back-to-top {
+	padding: 4px 20px;
+	font-size: 16px;
+}
+
+
+
+
+/*文章上一篇，下一篇
+ */
+
+.post-next-prev {
+	padding: 10px;
+	font-size: 1.1em;
+}
+
+.post-next-prev .active {
+	font-weight: bold;
+}
+
+
+
