@@ -7,8 +7,17 @@
 	position: relative;
     width: 100%;
     margin: 20px auto ;
-    background: url(../images/img_timeline_bg.png) 66px 0px repeat-y;
     overflow: hidden;
+}
+/*用伪元素替代背景*/
+.timeline-container:before {
+	position: absolute;
+	top: 5px;
+	left: 66px;
+	content: '';
+	width: 5px;
+	height: 100%;
+	background: #69aa35;
 }
 /*具体某一年的内容*/
 .timeline-date {
