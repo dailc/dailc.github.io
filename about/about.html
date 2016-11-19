@@ -91,7 +91,7 @@ layout: default
 				 		 {% capture targetTag %}{{ post.categories | first }}{% endcapture %}
 					 		{% if targetTag != site.bookTag %}
 					 		<li>
-					 			<a  href="{{ site.url }}{{ post.url }}" >{{ post.title }}</a>
+					 			<a  href="{{ post.url }}" >{{ post.title }}</a>
 					 		</li>
 					 		{% endif %}
 					 	{% endfor %}
