@@ -1,7 +1,9 @@
 auto: true
 
 markdown: kramdown
-highlighter: 'rouge'
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 # paginate 分页
 gems: [jekyll-paginate]
 paginate: 6
