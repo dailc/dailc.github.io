@@ -12,7 +12,7 @@
 				 			{{site.author.intro}}
 				 		</p>
 				 	<p class="info-foot">
-				 		<a class="left-card left">
+				 		<a class="left-card left" href="/blog/archive.html">
 				 			<em>
 				 				博客
 				 			</em>
@@ -21,7 +21,7 @@
 				 				
 				 			</strong>
 				 		</a>
-				 		<a class="middle-card left">
+				 		<a class="middle-card left" href="/demo/demo.html">
 				 			<em>
 				 				项目
 				 			</em>
@@ -29,12 +29,12 @@
 				 				{{site.categories.project.size}}
 				 			</strong>
 				 		</a>
-				 		<a class="right-card left">
+				 		<a class="right-card left" href="/blog/archiveAll.html">
 				 			<em>
-				 				爱好
+				 				随笔
 				 			</em>
 				 			<strong>
-				 				{{site.categories.favour.size}}
+				 				{{site.posts.size}}
 				 			</strong>
 				 		</a>
 				 	</p>

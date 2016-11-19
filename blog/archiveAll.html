@@ -34,9 +34,7 @@ layout: default
 						<h3 id="{{ y }}">{{ y }}</h3>
 						<ul class="post-list">
 					  {% endif %}
-					   {% capture targetTag %}{{ post.categories | first }}{% endcapture %}
-					   {% if targetTag != site.bookTag %}
-					   {% if targetTag != site.musicTag %}
+					   
 					 	<li class="post-list-item">
 							<span class="item-meta">
 								{{ post.date | date:"%Y-%m-%d" }}
@@ -46,8 +44,7 @@ layout: default
 								 {{ post.categories | first }}
 							</span>
 					 	</li>
-					 	{% endif %}
-					 	{% endif %}
+					 	
 				    {% endfor %}						
 					</div>	
 				</div>

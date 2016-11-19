@@ -20,7 +20,10 @@ layout: page
 
 			<div class="content-container">
 <!-- 为了方便，这个变量覆盖局部变量-->
-{% for post in paginator.posts %}				
+{% for post in paginator.posts %}			
+{% capture targetTag %}{{ post.categories | first }}{% endcapture %}
+{% if targetTag != site.bookTag %}
+{% if targetTag != site.musicTag %}
 <div class="blog-content">
 				<h2 class="post-title"><a  href="{{ post.url}}">{{ post.title }}</a> </h2>
 				<!-- metainfo-->
@@ -55,10 +58,12 @@ layout: page
 				</div>
 				<div class="read-more">
 					<a  href="{{ post.url}}">
-              阅读全文 »
+              			阅读全文 »
             		</a>
 				</div>	
 </div>
+{% endif %}
+{% endif %}
 {% endfor %}
 <!--分页相关 -->
 <nav class="pagination">

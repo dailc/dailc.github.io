@@ -10,7 +10,16 @@ paginate: 6
 permalink: /:year/:month/:day/:title
 
 feed: /feed.xml
+#这个tag用来判断book类型的博文，不展示在文章列表中，只在读后感里找到
 bookTag: book
+#几类标识，已读，正在读，未读,自动从markdown文章里生成书籍列表
+bookTypeReaded: readed
+bookTypeReading: reading
+bookTypeToRead: toread
+#这个tag用来判断音乐类型的博文，和book一样，都是默认不显示的
+musicTag: music
+#这个tag用来判断项目类型
+demoTag: project
 # excerpt 前期考虑用excerpt作为文章摘要,后面发出会影响统一样式，于是放弃了
 #excerpt_separator: "\n\n\n\n"
 #多说插件使用自己的 short_name

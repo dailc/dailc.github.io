@@ -87,12 +87,14 @@ layout: default
 					</div>
 					
 				 	<ul class="article-list ">
-				 		 {% for post in site.posts limit:5 %}
+				 		 {% for post in site.posts limit:10 %}
 				 		 {% capture targetTag %}{{ post.categories | first }}{% endcapture %}
 					 		{% if targetTag != site.bookTag %}
+					 		{% if targetTag != site.musicTag %}
 					 		<li>
 					 			<a  href="{{ post.url }}" >{{ post.title }}</a>
 					 		</li>
+					 		{% endif %}
 					 		{% endif %}
 					 	{% endfor %}
 					 		

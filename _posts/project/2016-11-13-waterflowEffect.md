@@ -4,6 +4,11 @@ title:      网页瀑布流效果实现的几种方式
 category: project
 tags: 瀑布流 javascript css 效果展示
 favour: 瀑布流
+
+show: https://dailc.github.io/showDemo/html/waterfallflow/demo_waterfall_flow_js.html
+src: https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html
+pic: https://dailc.github.io/showDemo/staticresource/waterfallflow/demo_js_waterfallflow_1.png
+technology: js css 瀑布流
 description: 网页实现瀑布流效果的几种实现,包括js元素实现瀑布流效果，css3实现瀑布流效果等
 ---
 

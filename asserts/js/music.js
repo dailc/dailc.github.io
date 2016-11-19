@@ -210,7 +210,8 @@
 		 */
 		init: function() {
 			var self = this;
-			self.createMusicItems();
+			//jekyll里动态生成
+			//self.createMusicItems();
 			self.initAllItems();
 		}
 	};

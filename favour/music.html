@@ -30,7 +30,38 @@ layout: page
 
 			<div class="content-container ">
 
-
+			 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.musicTag %}
+					    {% for post in cat[1] %}
+					    
+					   <div class="music-card" data-music="{{post.src}}">
+							<img class="pic" src="{{post.pic}}" />
+							<div class="member-info">
+								<span class="title">{{post.title}}</span>
+								<span class="author">{{post.author}}</span>
+								
+								<p>
+									{{post.description}}
+								</p>
+								
+							</div>
+							<div class="play-widget aplayer-container">
+								<div class="circle2 aplayer-play ">
+									<div class="play "></div>
+								</div>
+								<div class="circle2 aplayer-pause aplayer-hide">
+									<div class=" pause">
+										<div class="pause1"></div>
+										<div class="pause2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}
 				 
  			</div> 
  			

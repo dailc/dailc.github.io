@@ -25,21 +25,29 @@ layout: page
 	
 				
 <div class="grid">
-	
 
-<!--<div class="grid-item">
-        <a class="demo-img" href="">
-            <img src="https://dailc.github.io/staticResource/blog/hybrid/img_hybrid_base_hybridInfo_1.jpg">
-        </a>
-        <h3 class="demo-title">
-            <a href="">Hybrid示例应用</a>
-        </h3>
-        <p>主要技术：js Hybrid模式</p>
-        <p>混合开发，原生容器，h5+js进行业务功能开发，提升开发效率
-            <a href="">源代码 <i class="icon icon-code" ></i></a>
-        </p>
-</div>-->
 
+			 		{% for cat in site.categories %}
+			 		{% capture cateTag %}{{ cat[0] }}{% endcapture %}
+					{% if cateTag == site.demoTag %}
+					    {% for post in cat[1] %}
+					    
+					   <div class="grid-item">
+						        <a class="demo-img" href="{{post.show}}">
+						            <img src="{{post.pic}}">
+						        </a>
+						        <h3 class="demo-title">
+						            <a href="{{post.url}}">{{post.title}}</a>
+						        </h3>
+						        <p>主要技术：{{post.technology}}</p>
+						        <p>{{post.description}}
+						            <a href="{{post.src}}">源代码 <i class="icon icon-code" ></i></a>
+						        </p>
+						</div>
+					    {% endfor %}
+    
+					{% endif %}
+					{% endfor %}
     
 </div>
 </div>	
