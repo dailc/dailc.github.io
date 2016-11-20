@@ -65,13 +65,14 @@ ul {
     border-radius: 10px;
 }
 /******左侧的内容******/
-.post-list {
+.content-container  .post-list {
 	padding-left: 2em;
 }
 .post-list-item {
 	margin: 10px;
     padding: 5px 0;
 	border-bottom: 1px dashed #ccc;
+	overflow: hidden;
 }
 .post-list-item .item-meta,
 .post-list-item .item-tag {
@@ -101,4 +102,12 @@ ul {
 .post-list-item a:hover {
 	padding-left: 10px;
 	
+}
+@media only screen and (max-width: 768px) {
+	.content-container {
+    	padding: 10px;
+	}
+	.content-container  .post-list {
+		padding-left: 0;
+	}
 }

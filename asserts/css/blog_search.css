@@ -1,0 +1,45 @@
+/**
+ * 博客搜索页面
+ * @author dailc
+ */
+.markdown-body .page-title {
+	margin-bottom: 1em;
+	padding-bottom: 0;
+	padding-left: 25%;
+}
+.search-type {
+	width: 60%;
+    padding: 3px;
+    padding-left: 18px;
+    border: none;
+    border-bottom: 1px solid #999;
+    border-radius: 0;
+    outline: none;
+    opacity: 0.5;
+}
+.search-type:active,
+.search-type:focus {
+	opacity: 1;
+}
+.search-btn {
+	display: inline-block;
+	content: '';
+	width: 24px;
+	height: 24px;
+	background: url(../images/svg_search.svg) no-repeat 0 50%;
+    background-size: 24px 24px;
+    opacity: .6;
+}
+.search-btn:active {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	.markdown-body .page-title {
+		margin-top: 3em;
+		padding-left: 10px;
+	}
+	.search-type {
+		width: 80%;
+	}
+}

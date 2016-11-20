@@ -1,0 +1,52 @@
+---
+layout: default
+---
+		
+
+
+<link href="/asserts/css/blog_article_post.css" rel="stylesheet" type="text/css" media="all">
+
+	
+	<div class="wrap">
+		<div class="container">
+			<!-- 左侧，内容，多说评论等-->
+			<div class="col-md-9">
+				<!-- 内容-->
+				<div class="markdown-body">
+					<!--标题区域 -->
+					<div class="title-container">
+					<h1 class="page-title"><a  title=""></a> </h1>
+						
+						<section class="right-tips">
+							<span >
+								收藏
+							</span>
+						</section>
+					</div>
+					
+					<!-- 内容区域-->
+					<div class="content-container">
+						 {{ content }}
+					</div>
+					
+				</div>
+				<!-- 多说-->
+				{% include litemplate/duoshuo %}
+				
+				
+			</div>
+			
+			<!-- 右侧包括个人介绍，TOC菜单-->
+			<div class="col-md-3">
+				
+
+				 <!-- TOC动态菜单-->
+				  <div class="slideNavContainer">     
+				</div> 				
+					
+			</div> 
+ 
+		</div>
+	</div>
+		
+<script type="text/javascript" src="/asserts/js/post.js" ></script>

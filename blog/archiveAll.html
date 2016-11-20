@@ -41,7 +41,7 @@ layout: default
 							</span>
 							<a  href="{{ post.url }}" class="item-name">{{ post.title }}</a>
 							<span class="item-tag">
-								 {{ post.categories | first }}
+								 {% for cat in post.categories %}{% if forloop.rindex != 1 %}{{ cat }}-{% else %}{{ cat }}{% endif %}{% endfor %}
 							</span>
 					 	</li>
 					 	

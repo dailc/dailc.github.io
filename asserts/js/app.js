@@ -178,8 +178,10 @@
 	 * @param {String} className，选填，填了后会过滤特定class
 	 */
 	exports.getNextElement = function(node, className) {
-		if(!node){return null;}
-		if(node.nextSibling&&node.nextSibling.nodeType == 1) { //判断下一个节点类型为1则是“元素”节点   
+		if(!node) {
+			return null;
+		}
+		if(node.nextSibling && node.nextSibling.nodeType == 1) { //判断下一个节点类型为1则是“元素”节点   
 			if(!className || node.classList.contains(className)) {
 				//如果符合选择
 				return node.nextSibling;
@@ -189,7 +191,7 @@
 			}
 
 		}
-		if(node.nextSibling&&node.nextSibling.nodeType == 3) { //判断下一个节点类型为3则是“文本”节点  ，回调自身函数  
+		if(node.nextSibling && node.nextSibling.nodeType == 3) { //判断下一个节点类型为3则是“文本”节点  ，回调自身函数  
 			return exports.getNextElement(node.nextSibling);
 		}
 		return null;
@@ -200,8 +202,10 @@
 	 * @param {String} className，选填，填了后会过滤特定class
 	 */
 	exports.getPreElement = function(node, className) {
-		if(!node){return null;}
-		if(node.previousSibling&&node.previousSibling.nodeType == 1) { //判断下一个节点类型为1则是“元素”节点   
+		if(!node) {
+			return null;
+		}
+		if(node.previousSibling && node.previousSibling.nodeType == 1) { //判断下一个节点类型为1则是“元素”节点   
 			if(!className || node.classList.contains(className)) {
 				//如果符合选择
 				return node.previousSibling;
@@ -211,7 +215,7 @@
 			}
 
 		}
-		if(node.previousSibling&&node.previousSibling.nodeType == 3) { //判断下一个节点类型为3则是“文本”节点  ，回调自身函数  
+		if(node.previousSibling && node.previousSibling.nodeType == 3) { //判断下一个节点类型为3则是“文本”节点  ，回调自身函数  
 			return exports.getPreElement(node.previousSibling);
 		}
 		return null;
@@ -364,12 +368,12 @@
 		}
 		if(options.display) {
 			//如果是与display显示有关
-			if(options.display === 'hide'||options.display === 'none'){
+			if(options.display === 'hide' || options.display === 'none') {
 				hide(selector);
-			}else if(options.display === 'show'||options.display === 'block'){
+			} else if(options.display === 'show' || options.display === 'block') {
 				show(selector);
 			}
-			return ;
+			return;
 		}
 		//默认500ms
 		duration = duration || 500;
@@ -409,22 +413,33 @@
 			app.bindEvent(collapsedBtn, function() {
 				//console.log("点击");
 				if(menuContainer.classList.contains('hideMenu')) {
-					app.animate(menuContainer,{
-						"display":"show"
+					app.animate(menuContainer, {
+						"display": "show"
 					});
 					menuContainer.classList.remove('hideMenu');
 				} else {
-					app.animate(menuContainer,{
-						"display":"hide"
+					app.animate(menuContainer, {
+						"display": "hide"
 					});
 					menuContainer.classList.add('hideMenu');
 				}
 			}, 'click');
 		}
 	}
+	/**
+	 * @description 处理搜索
+	 */
+	function dealSearch() {
+		var inputDom = document.querySelector('.site-search input');
+		app.bindEvent(inputDom, function() {
+			var value = inputDom.value;
+			window.location.href = '/search/search#'+value;
+		}, 'change');
+	}
 	window.onload = function() {
 		console.log("这里是戴荔春的个人博客!");
 		console.log("联系方式: https://dailc.github.io/about/about.html");
 		dealWithCollapsedBtn();
+		dealSearch();
 	};
 })(window.app = {});
