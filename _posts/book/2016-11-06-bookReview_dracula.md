@@ -11,6 +11,7 @@ description: 故事以日记的风格展开，讲述了地产商人Jonathan Hark
 ---
 
 
+
 ## 简介
 故事以日记的风格展开，讲述了地产商人Jonathan Harker,与其妻子Mina,其妻子好友Lucy,热心医生 DR. Seward 以及牺牲的勇士Quincey与邪恶的吸血鬼Count Dracula之间的故事。
 

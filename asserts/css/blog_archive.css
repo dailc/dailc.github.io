@@ -7,6 +7,7 @@
 ul {
 	border: 0;
 }
+
 .col-md-3 {
 	position: relative;
 }
@@ -61,7 +62,7 @@ ul {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    background-color: #e74c3c;;
+    background-color: #acbbc6;;
     border-radius: 10px;
 }
 /******左侧的内容******/
@@ -109,5 +110,11 @@ ul {
 	}
 	.content-container  .post-list {
 		padding-left: 0;
+	}
+}
+@media only screen and (min-width: 992px){
+	.container .demo-container {
+		width: 80%;
+		margin: auto;
 	}
 }
