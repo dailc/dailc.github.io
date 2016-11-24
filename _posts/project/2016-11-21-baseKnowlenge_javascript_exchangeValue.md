@@ -184,5 +184,8 @@ arr[0] = arr.splice(2, 1, arr[0])[0];
 
 ## 分析工具示例Demo
 如下demo中可以使用分析工具进行 JS变量交换方式分析对比
-[JS几种数值交换方式分析比较]
-(http://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
+
+[JS几种数值交换方式分析比较](http://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
+
+## 参考 
+[Exchange Variables Gracefully](https://jsperf.com/exchange-variables-gracefully/2)
