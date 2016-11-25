@@ -148,7 +148,3 @@ for(let value of arr) {
 如下demo中可以使用分析工具进行 JS数组遍历方式分析对比
 
 [Js中几种常用数组遍历方式分析比较工具](https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html)
-
-## 原文链接
-同步更新到了我个人博客上
-[Js中几种常用数组遍历方式分析比较博文](https://dailc.github.io/2016/11/25/baseKnowlenge_javascript_jsarrayGoThrough)

@@ -187,9 +187,5 @@ arr[0] = arr.splice(2, 1, arr[0])[0];
 
 [JS几种变量交换方式分析比较](https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
 
-## 原文链接
-同步更新到了我个人博客上
-[JS几种变量交换方式分析比较博文](https://dailc.github.io/2016/11/21/baseKnowlenge_javascript_exchangeValue)
-
 ## 参考 
 [Exchange Variables Gracefully](https://jsperf.com/exchange-variables-gracefully/2)
