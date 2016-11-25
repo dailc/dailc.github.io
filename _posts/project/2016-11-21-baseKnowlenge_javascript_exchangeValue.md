@@ -3,10 +3,10 @@ layout:     post
 title:      JS几种变量交换方式以及性能分析对比
 category: project
 tags:  javascript 基础知识 性能分析 变量交换
-favour: 变量交换性能分析
+favour: 变量交换
 
 show: http://blog.dailichun.com/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
-src: https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html
+src: https://github.com/dailc/showDemo/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
 pic: https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_2.png
 technology: javascript 性能分析 变量交换
 description: JS几种数值交换方式分析比较,包括tmp变量交换,加减法，异或，数组法等
@@ -185,7 +185,11 @@ arr[0] = arr.splice(2, 1, arr[0])[0];
 ## 分析工具示例Demo
 如下demo中可以使用分析工具进行 JS变量交换方式分析对比
 
-[JS几种数值交换方式分析比较](http://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
+[JS几种变量交换方式分析比较](https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
+
+## 原文链接
+同步更新到了我个人博客上
+[JS几种变量交换方式分析比较博文](https://dailc.github.io/2016/11/21/baseKnowlenge_javascript_exchangeValue)
 
 ## 参考 
 [Exchange Variables Gracefully](https://jsperf.com/exchange-variables-gracefully/2)
