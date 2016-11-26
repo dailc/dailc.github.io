@@ -1,14 +1,13 @@
 # 博客说明
 在最初参考了很多jekyll博客模板后，最终决定自己动手做自己的博客，于是自己从头开始搭建
 
-关于为什么要搭建自己的博客,见 [一个新的开始](https://dailc.github.io/2016/07/28/startBlog)
+关于为什么要搭建自己的博客,见 [一个新的开始](https://dailc.github.io/2016/07/28/startBlog.html)
 
-jekyll博客的搭建过程,见[jekyll博客搭建之艰辛之路](https://dailc.github.io/2016/10/29/jekyllbuild)
+jekyll博客的搭建过程,见[jekyll博客搭建之艰辛之路](https://dailc.github.io/2016/10/29/jekyllbuild.html)
 
 截止至最后一次更新,基本功能都已经完成，剩余内容还有:
 
 * 风格统一化(后续来一次统一的视觉设计和颜色搭配)
-* 图片预览查看
 
 ## 最后更新
 2016-11-20

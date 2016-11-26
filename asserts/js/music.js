@@ -39,7 +39,7 @@
 					console.log("下一首");
 					//获取兄弟节点
 					if(self.oldDom) {
-						var next = app.getNextElement(self.oldDom.parentNode);
+						var next = app.dom.getNextElement(self.oldDom.parentNode);
 						if(next&&next.innerHTML){
 							console.log(next.innerHTML);
 							self.playNewSongs(next.querySelector('.play-widget'));
@@ -51,7 +51,7 @@
 					console.log("上一首");
 					//获取兄弟节点
 					if(self.oldDom) {
-						var pre = app.getPreElement(self.oldDom.parentNode);
+						var pre = app.dom.getPreElement(self.oldDom.parentNode);
 						if(pre&&pre.innerHTML){
 							console.log(pre.innerHTML);
 							self.playNewSongs(pre.querySelector('.play-widget'));
@@ -101,7 +101,7 @@
 			var self = this;
 			var playWidgets = document.querySelectorAll('.play-widget');
 			self.playWidgets = playWidgets;
-			app.bindEvent(playWidgets, function(e) {
+			app.event.bindEvent(playWidgets, function(e) {
 				var playIcon = this.querySelector('.aplayer-play');
 				if(playIcon.classList.contains('aplayer-hide')) {
 					//如果已经播放了,现在点击的是暂停

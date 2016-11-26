@@ -20,7 +20,7 @@
 			var h2Index = 0,
 				h3Index = 0;
 			self.allHeaders = titleArray;
-			app.each(titleArray, function(index, item) {
+			app.common.each(titleArray, function(index, item) {
 				var self = this;
 				//console.log(index + ',' + item);
 				//console.log("遍历:"+self.tagName);
@@ -85,9 +85,9 @@
 			//记录所有的目标title的scrolltop,然后每次滚动时根据这查询当前激活项
 			var scrollTopArray = [];
 			var tocArray = document.querySelector('.toc-sidenav').querySelectorAll('.h2,.h3');
-			app.each(tocArray, function(index, item) {
+			app.common.each(tocArray, function(index, item) {
 				var self = this;
-				var scrollTop = app.getdomY('#' + this.querySelector('a').getAttribute('data-id'));
+				var scrollTop = app.offset.getTop('#' + this.querySelector('a').getAttribute('data-id'));
 				scrollTopArray.push(scrollTop);
 			});
 			//记录scrolltop
@@ -122,25 +122,25 @@
 			self.tocSidenavWith = self.tocSidenav.offsetWidth;
 			TocObj.tocSidenav.style.width = self.tocSidenavWith + 'px';
 			TocObj.tocSidenav.style.overflow = 'auto';
-			TocObj.tocSidenav.style.maxHeight = app.getWindowHeight() + 'px';
+			TocObj.tocSidenav.style.maxHeight = app.dimensions.getWinHeight() + 'px';
 			self.dealATag();
 			//console.log("self.targetScrollTop:"+JSON.stringify(self.targetScrollTop));
 			//监听
-			app.bindEvent('.toc-menu,.back-to-top', function(e) {
+			app.event.bindEvent('.toc-menu,.back-to-top', function(e) {
 				//阻止默认的跳转，改成用自定义跳转
 				e.preventDefault();
 				//console.log(this.innerHTML);
 				if(this.classList.contains('back-to-top')) {
-					app.animate('body', {
+					app.animate.animate('body', {
 						scrollTop: 0
 					}, 500);
 				} else {
 					//获得当前菜单对应的title的id
 					var selector = this.querySelector('a').getAttribute('data-id');
-					var targetScrollTop = app.getdomY('#' + selector);
+					var targetScrollTop = app.offset.getTop('#' + selector);
 					//document.body.scrollTop = targetScrollTop -30;
-					//console.log("~~~目标top:"+targetScrollTop);
-					app.animate('body', {
+					console.log("~~~目标top:"+targetScrollTop);
+					app.animate.animate('body', {
 						scrollTop: targetScrollTop
 					}, 500);
 				}
@@ -150,10 +150,10 @@
 	};
 	TocObj.initToc('.slideNavContainer');
 
-	var originSidenavTop = app.getdomY(TocObj.tocSidenav);
-	var finalHeaderTop = app.getdomY(TocObj.allHeaders[TocObj.allHeaders.length - 1]);
+	var originSidenavTop = app.offset.getTop(TocObj.tocSidenav);
+	var finalHeaderTop = app.offset.getTop(TocObj.allHeaders[TocObj.allHeaders.length - 1]);
 	document.addEventListener('scroll', function() {
-		var tmpTop = app.getScrollTop();
+		var tmpTop = app.dimensions.getScrollTop();
 		//当前激活的选项
 		var index = 0;
 		var scrollTop = TocObj.targetScrollTop;
@@ -170,16 +170,16 @@
 			TocObj.allTocs[i].classList.remove('active');
 		}
 		currActiveToc.classList.add('active');
-		var currActiveTocTop = app.getdomY(currActiveToc) + 40;
+		var currActiveTocTop = app.offset.getTop(currActiveToc) + 40;
 
 		if(tmpTop > originSidenavTop + 40) {
 
-			if(currActiveTocTop + TocObj.tocSidenav.scrollTop > app.getWindowHeight()) {
+			if(currActiveTocTop + TocObj.tocSidenav.scrollTop > app.dimensions.getWinHeight()) {
 				//console.log("大于window");
-				if(tmpTop + app.getWindowHeight() > finalHeaderTop) {
+				if(tmpTop + app.dimensions.getWinHeight() > finalHeaderTop) {
 					//如果已经最后一个标题的 scrolltop
 					TocObj.tocSidenav.style.position = 'absolute';
-					TocObj.tocSidenav.style.top = (finalHeaderTop - app.getWindowHeight()) + 'px';
+					TocObj.tocSidenav.style.top = (finalHeaderTop - app.dimensions.getWinHeight()) + 'px';
 				} else {
 					//否则
 					TocObj.tocSidenav.style.position = 'fixed';
@@ -201,7 +201,7 @@
 		} else {
 			TocObj.tocSidenav.style.position = 'static';
 		}
-		//console.log("top:"+tmpTop+',finalTop:'+finalHeaderTop+',currTocTop:'+currActiveTocTop+',winHeight:'+app.getWindowHeight());
+		//console.log("top:"+tmpTop+',finalTop:'+finalHeaderTop+',currTocTop:'+currActiveTocTop+',winHeight:'+app.dimensions.getWinHeight());
 		//console.log("当前激活:"+currActiveToc.innerHTML);
 	});
 })(window);

@@ -6,7 +6,7 @@ layout: page
 
 <link href="/asserts/css/blog_personCard_style.css" rel="stylesheet" type="text/css" media="all">
 <link href="/asserts/css/blog_timeline.css" rel="stylesheet"  />
-	
+<link href="/asserts/css/imageBubble.css" rel="stylesheet" type="text/css" media="all">	
 <div class="demo-container">
 		<!-- 个人简介-->
 		<div class="markdown-body">
@@ -34,3 +34,7 @@ layout: page
 		{% include litemplate/duoshuo %}
 </div>
 <script type="text/javascript" src="/asserts/js/timeline.js" ></script>
+<script type="text/javascript" src="/asserts/js/imageBubble.js" ></script>
+<script>
+	ImageBubble.init('.container img');
+</script>

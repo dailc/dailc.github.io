@@ -54,8 +54,8 @@
 
 			};
 			var coverFlipItem = document.querySelectorAll('.cover-flip-item');
-			app.bindEvent(coverFlipItem, flipCoverCallback, 'mouseenter');
-			app.bindEvent(coverFlipItem, flipOutCallback, 'mouseleave');
+			app.event.bindEvent(coverFlipItem, flipCoverCallback, 'mouseenter');
+			app.event.bindEvent(coverFlipItem, flipOutCallback, 'mouseleave');
 		},
 		/**
 		 * @description 创建所有书

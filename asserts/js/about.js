@@ -39,10 +39,10 @@
 			
 		};
 		var flipItems = document.querySelectorAll('.flip-item');
-		app.bindEvent(flipItems, flipCallback);
+		app.event.bindEvent(flipItems, flipCallback);
 		var coverFlipItem = document.querySelectorAll('.cover-flip-item');
-		app.bindEvent(coverFlipItem, flipCoverCallback, 'mouseenter');
-		app.bindEvent(coverFlipItem, flipOutCallback, 'mouseleave');
+		app.event.bindEvent(coverFlipItem, flipCoverCallback, 'mouseenter');
+		app.event.bindEvent(coverFlipItem, flipOutCallback, 'mouseleave');
 	};
 	
 	setTimeout(function(){

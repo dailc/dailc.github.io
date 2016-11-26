@@ -54,11 +54,11 @@
 			var self = this;
 			var inputDom = document.querySelector('.page-title input');
 			var searchBtn = document.querySelector('.page-title .search-btn');
-			app.bindEvent(searchBtn,function(){
+			app.event.bindEvent(searchBtn,function(){
 				var value = inputDom.value;
 				self.query(value,data);
 			},'click');
-			app.bindEvent(inputDom,function(){
+			app.event.bindEvent(inputDom,function(){
 				var value = inputDom.value;
 				self.query(value,data);
 			},'change');
@@ -70,7 +70,14 @@
 		 */
 		getSourceData:function(callback){
 			var self = this;
-			
+//			var data = [{
+//				"title":"秘密花园 && 读后感-英文读本 &&2016-11-19",
+//				"url":"/2016/11/19/bookReview_thesecretgarden"
+//			},{
+//				"title":"红与黑 && 读后感_英文读本 &&2016-11-19",
+//				"url":"/2016/11/19/bookReview_theredandtheblack"
+//			}];
+//			
 			var jsonData = appAjax.ajax('/search/search_data.json', {
 			dataType: "json",
 			timeout: "6000", //超时时间设置为3秒；

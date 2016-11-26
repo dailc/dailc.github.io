@@ -23,8 +23,8 @@
 						var targetDom = document.getElementById(target);
 						//childNodes是标准的 children是非标准的,但是几乎所有浏览器支持，但是不会返回文本以及空节点
 						//nextSibling 会找到文本节点，所以需要手动排除
-						var targetChildsCount = app.getNextElement(targetDom).children.length
-						app.getNextElement(el).innerText = targetChildsCount;
+						var targetChildsCount = app.dom.getNextElement(targetDom).children.length
+						app.dom.getNextElement(el).innerText = targetChildsCount;
 					}
 				}
 			});
@@ -35,7 +35,7 @@
 		 */
 		initTocActive: function() {
 			var self = this;
-			app.bindEvent(self.tocList, function(e) {
+			app.event.bindEvent(self.tocList, function(e) {
 				//阻止默认的跳转，改成用自定义跳转
 				e.preventDefault();
 				//console.log(this.innerHTML);
@@ -45,10 +45,10 @@
 					selector = selector.replace('#','');
 				}
 				selector = document.getElementById(selector);
-				var targetScrollTop = app.getdomY(selector);
+				var targetScrollTop = app.offset.getTop(selector);
 				//document.body.scrollTop = targetScrollTop -30;
 				//console.log("~~~目标top:"+targetScrollTop);
-				app.animate('body', {
+				app.animate.animate('body', {
 					scrollTop: targetScrollTop
 				}, 500);
 

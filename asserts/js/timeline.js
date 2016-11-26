@@ -18,7 +18,7 @@
 				dom.parentNode.classList.add('curr');
 //				if(dom.parentNode.classList.contains('closed')){
 //					dom.parentNode.classList.remove('closed');
-//					app.animate(dom.parentNode.querySelector('.event-content'), {
+//					app.animate.animate(dom.parentNode.querySelector('.event-content'), {
 //						display: 'show'
 //					});
 //				}
@@ -26,11 +26,11 @@
 			//监听滑动
 			document.addEventListener('scroll', function() {
 				//console.log("y:" + getScrollTop());
-				var currTop = app.getScrollTop();
+				var currTop = app.dimensions.getScrollTop();
 				if(eventMarks) {
 					var yArray = [];
 					for(var i = 0, len = eventMarks.length; i < len; i++) {
-						yArray[i] = app.getdomY(eventMarks[i]);
+						yArray[i] = app.offset.getTop(eventMarks[i]);
 					}
 					//分析哪一个更近
 					var curr = 0;
@@ -54,18 +54,18 @@
 			var self = this;
 			//绑定每一个的点击,显示和隐藏
 			var eventThings = document.querySelectorAll('.event-title,.timeline-mark');
-			app.bindEvent(eventThings, function(e) {
+			app.event.bindEvent(eventThings, function(e) {
 				var parent = this.parentNode;
 				if(parent) {
 					if(parent.classList.contains('closed')) {
 						//已经关闭
 						parent.classList.remove('closed');
-						app.animate(parent.querySelector('.event-content'), {
+						app.animate.animate(parent.querySelector('.event-content'), {
 							display: 'show'
 						});
 					} else {
 						parent.classList.add('closed');
-						app.animate(parent.querySelector('.event-content'), {
+						app.animate.animate(parent.querySelector('.event-content'), {
 							display: 'hide'
 						});
 					}
@@ -74,7 +74,7 @@
 			//年份的点击与隐藏
 			var majorMarks = document.querySelectorAll('.timeline-marker-major');
 			if(majorMarks) {
-				app.bindEvent(majorMarks, function(el) {
+				app.event.bindEvent(majorMarks, function(el) {
 					var eventContent = this.parentNode.querySelectorAll('.timeline-event');
 					if(eventContent) {
 						var isAllClosed = true;
@@ -88,7 +88,7 @@
 							if(isAllClosed) {
 								if(!el.classList.contains('closed')) {
 									el.classList.add('closed');
-									app.animate(el.querySelector('.event-content'), {
+									app.animate.animate(el.querySelector('.event-content'), {
 										display: 'hide'
 									});
 								}
@@ -96,7 +96,7 @@
 							} else {
 								if(el.classList.contains('closed')) {
 									el.classList.remove('closed');
-									app.animate(el.querySelector('.event-content'), {
+									app.animate.animate(el.querySelector('.event-content'), {
 										display: 'show'
 									});
 								}
@@ -110,7 +110,7 @@
 			if(eventContent) {
 				for(var i = 0, len = eventContent.length; i < len; i++) {
 					if(eventContent[i].classList.contains('closed')) {
-						app.animate(eventContent[i].querySelector('.event-content'), {
+						app.animate.animate(eventContent[i].querySelector('.event-content'), {
 							display: 'hide'
 						});
 					}
