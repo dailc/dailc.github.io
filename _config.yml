@@ -7,7 +7,7 @@ kramdown:
 # paginate 分页
 gems: [jekyll-paginate]
 paginate: 6
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title.html
 
 feed: /feed.xml
 #这个tag用来判断book类型的博文，不展示在文章列表中，只在读后感里找到
