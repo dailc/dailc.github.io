@@ -373,6 +373,34 @@ html,body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+/*表格*/
+.markdown-body table {
+	display: table;
+	width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-left: none;
+}
+.markdown-body table thead th {
+	padding: 8px;
+	line-height: 20px;
+	font-weight: bold;
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+	vertical-align: bottom;
+}
+.markdown-body table  td {
+	display: table-cell;
+	padding: 8px;
+	line-height: 20px;
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    vertical-align: top;
+}
 /********************************post布局相关相关********************************
  * 这里主要是一些post页面的通用布局,比如container 的自适应样式
  * ******/
