@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: toread
+bookType: reading
 cover: https://img5.doubanio.com/lpic/s1817666.jpg
 title: 海底两万里
 title_en: (TWENTY THOUSAND LEAGUES UNDER THE SEA)
@@ -18,4 +18,4 @@ description: 本书是法国举世闻名的科幻小说作家儒尔·凡尔纳�
 
 
 ## 一些想法
-想读
+正在读
