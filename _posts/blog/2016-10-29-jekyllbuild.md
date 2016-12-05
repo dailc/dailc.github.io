@@ -327,3 +327,8 @@ gem install rdiscount -V
 [myblog]: https://dailc.github.io/
 
 [rubysource]: https://dailc.github.io/staticResource/blog/jekyll/howtobuild/img_jekyll_jekyllbuild_1.png
+
+## 原文地址
+原文在我个人博客上面
+
+[jekyll博客搭建之艰辛之路](https://dailc.github.io/2016/10/29/jekyllbuild.html)

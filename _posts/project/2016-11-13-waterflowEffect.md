@@ -148,7 +148,10 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 源码可以查看
 [https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html](https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html)
 
+## 原文地址
+原文在我个人博客上面
 
+[网页瀑布流效果实现的几种方式](https://dailc.github.io/2016/11/13/waterflowEffect.html)
 
 ## 参考链接
 
