@@ -1,15 +1,10 @@
 ---
 layout:     post
 title:      JS几种数组遍历方式以及性能分析对比
-category: project
+category: blog
 tags:  javascript 基础知识 性能分析 数组遍历
 favour: 数组遍历
 
-show: https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
-src: https://github.com/dailc/jsPerformanceAnalysis/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
-pic: https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_2.png
-technology: javascript 性能分析 数组遍历
-description: JS中几种常用数组遍历方式分析比较,包括for循环,for in，foreach，map法等
 ---
 
 ## 前言

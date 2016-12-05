@@ -1,15 +1,10 @@
 ---
 layout:     post
 title:      JS几种变量交换方式以及性能分析对比
-category: project
+category: blog
 tags:  javascript 基础知识 性能分析 变量交换
 favour: 变量交换
 
-show: http://blog.dailichun.com/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
-src: https://github.com/dailc/jsPerformanceAnalysis/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
-pic: https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_2.png
-technology: javascript 性能分析 变量交换
-description: JS几种数值交换方式分析比较,包括tmp变量交换,加减法，异或，数组法等
 ---
 
 ## 前言
