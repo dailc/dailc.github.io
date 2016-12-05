@@ -3,7 +3,7 @@ layout:     post
 title:      JS性能分析系列示例Demo
 category: project
 tags:  javascript 基础知识 性能分析 变量交换
-favour: 性能分析
+favour: javascript 性能分析
 
 show: https://dailc.github.io/jsPerformanceAnalysis/index.html
 src: https://github.com/dailc/jsPerformanceAnalysis

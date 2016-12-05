@@ -4,6 +4,7 @@ title:      JS几种变量交换方式以及性能分析对比
 category: blog
 tags:  javascript 基础知识 性能分析 变量交换
 favour: 变量交换
+description: JS几种数值交换方式分析比较,包括tmp变量交换,加减法，异或，数组法等
 
 ---
 

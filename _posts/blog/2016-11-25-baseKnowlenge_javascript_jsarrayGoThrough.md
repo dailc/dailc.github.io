@@ -4,6 +4,7 @@ title:      JS几种数组遍历方式以及性能分析对比
 category: blog
 tags:  javascript 基础知识 性能分析 数组遍历
 favour: 数组遍历
+description: JS中几种常用数组遍历方式分析比较,包括for循环,for in，foreach，map法等
 
 ---
 
