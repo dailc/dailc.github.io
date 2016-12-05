@@ -5,9 +5,9 @@ category: project
 tags:  javascript 基础知识 性能分析 变量交换
 favour: 变量交换
 
-show: http://blog.dailichun.com/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
-src: https://github.com/dailc/showDemo/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
-pic: https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_2.png
+show: http://blog.dailichun.com/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
+src: https://github.com/dailc/jsPerformanceAnalysis/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html
+pic: https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_2.png
 technology: javascript 性能分析 变量交换
 description: JS几种数值交换方式分析比较,包括tmp变量交换,加减法，异或，数组法等
 ---
@@ -29,7 +29,7 @@ arr[0] = arr.splice(k, 1, arr[0])[0];
 
 结果，大大的出乎我的意料，这种方式的效率比我想象的要低的多。以下是其中一个测试结果的图
 
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_3.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_3.png)
 
 于是,基于这点，又研究了下其它的几种数值交换的方式，一起整合进入了分析工具中，才有了本文的这次总结。
 
@@ -172,20 +172,20 @@ arr[0] = arr.splice(2, 1, arr[0])[0];
 
 #### 分析结果1
 以下截图中的数据是，在chrome中运行了一亿次后得出的结论*(每次运行100万次,一共100个循环，得到的分析结果)*
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_4.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_4.png)
 可以看出,tmp变量交换最快,try catch最慢
 
 #### 分析结果2
 以下截图数据是，在chrome (支持es6)中运行了100万次后得出的结论*(每次运行1万次,一共100个循环，得到的分析结果)*
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_5.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_5.png)
 
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_3.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsexchangevalue_3.png)
 可以看出,eval最慢,splice性能较低，tmp变量交换很稳定
 
 ## 分析工具示例Demo
 如下demo中可以使用分析工具进行 JS变量交换方式分析对比
 
-[JS几种变量交换方式分析比较](https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
+[JS几种变量交换方式分析比较](https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsexchangevalue.html)
 
 ## 参考 
 [Exchange Variables Gracefully](https://jsperf.com/exchange-variables-gracefully/2)

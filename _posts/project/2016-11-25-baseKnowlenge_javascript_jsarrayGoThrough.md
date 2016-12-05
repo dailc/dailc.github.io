@@ -5,9 +5,9 @@ category: project
 tags:  javascript 基础知识 性能分析 数组遍历
 favour: 数组遍历
 
-show: https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
-src: https://github.com/dailc/showDemo/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
-pic: https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_2.png
+show: https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
+src: https://github.com/dailc/jsPerformanceAnalysis/blob/master/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html
+pic: https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_2.png
 technology: javascript 性能分析 数组遍历
 description: JS中几种常用数组遍历方式分析比较,包括for循环,for in，foreach，map法等
 ---
@@ -136,15 +136,15 @@ for(let value of arr) {
 
 #### 分析结果1
 以下截图中的数据是，在chrome (支持es6)中运行了100次后得出的结论*(每次运行10次,一共10个循环，得到的分析结果)*
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_1.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_1.png)
 
 可以看出,forin循环最慢。优化后的普通for循环最快
 
 #### 分析结果2
 以下截图数据是，在chrome (支持es6)中运行了1000次后得出的结论*(每次运行100次,一共10个循环，得到的分析结果)*
-![](https://dailc.github.io/showDemo/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_2.png)
+![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/demo_js_performanceAnalysis_jsarrayGoThrough_2.png)
 
 ## 分析工具示例Demo
 如下demo中可以使用分析工具进行 JS数组遍历方式分析对比
 
-[Js中几种常用数组遍历方式分析比较工具](https://dailc.github.io/showDemo/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html)
+[Js中几种常用数组遍历方式分析比较工具](https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsarrayGoThrough.html)
