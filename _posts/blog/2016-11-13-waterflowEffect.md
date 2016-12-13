@@ -115,9 +115,9 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 示例与源码
 想看示例页面可以戳一戳 
-[css3瀑布流效果](https://dailc.github.io/showDemo/html/waterfallflow/demo_waterfall_flow_css3.html)
+[css3瀑布流效果](https://dailc.github.io/showDemo/waterfallflow/demo_waterfall_flow_css3.html)
 源码可以查看
-[https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_css3.html](https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_css3.html)
+[https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_css3.html](https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_css3.html)
 
 
 ## js绝对布局瀑布流实现
@@ -139,10 +139,10 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 示例与源码
 想看示例页面可以戳一戳 
-[js瀑布流效果](https://dailc.github.io/showDemo/html/waterfallflow/demo_waterfall_flow_js.html)
+[js瀑布流效果](https://dailc.github.io/showDemo/waterfallflow/demo_waterfall_flow_js.html)
 
 源码可以查看
-[https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html](https://github.com/dailc/showDemo/blob/master/html/waterfallflow/demo_waterfall_flow_js.html)
+[https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_js.html](https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_js.html)
 
 ## 原文地址
 原文在我个人博客上面
