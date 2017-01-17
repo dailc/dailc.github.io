@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: toread
+bookType: reading
 cover: https://img1.doubanio.com/lpic/s2400187.jpg
 title: 莎士比亚戏剧故事
 title_en: (TALES FROM SHAKESPEARE)
