@@ -120,6 +120,9 @@ description: Html5+开发的个人经历，如何接触，如何入门，为何�
 
 ## 附录
 
+### 原文链接
+[https://dailc.github.io/2017/02/15/html5plusDecelop.html](https://dailc.github.io/2017/02/15/html5plusDecelop.html)
+
 ### 源码与文档
 [基于h5+的跨平台开发框架](https://github.com/dailc/hybrid_dcloud_rayapp)
 
