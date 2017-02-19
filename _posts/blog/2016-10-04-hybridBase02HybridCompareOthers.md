@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Hybrid APP基础篇(二)->Native、Hybrid、React Native、Web App方案的分析比较
+title:      Hybrid APP基础篇(二)->Native、Hybrid、React Native、Weex等方案的分析比较
 category: blog
 tags: Hybrid
 favour: Hybrid
-description: Native、Hybrid、React-Native、Weex、Web App方案的分析比较
+description: Native、Hybrid、React Native、Weex等方案的分析比较
 ---
 
 
@@ -13,7 +13,7 @@ description: Native、Hybrid、React-Native、Weex、Web App方案的分析比�
 ### 写在前面的话
 
 **20170219更新**
-另外，最近阿里开源的`weex`也有越来越火热的趋势。
+另外，最近阿里开源的`weex`也有越来越火热的趋势。补上部分weex的说明。
 
 **20161004更新**
 初稿发布
@@ -149,6 +149,23 @@ Facebook发起的开源的一套新的APP开发方案,Facebook在当初深入研
 	* 不要小瞧这一点，对于一些`传统的大规模低阶程序员的公司`而言，这成为了选用React-Native的最大一个障碍，因为无法要求每一个人都能够会这个开发，推广起来有很大问题
 	* 当然，对于一些相对精英公司来说，这点倒是影响不大
 
+### Weex App
+weex是阿里开源出来的一套APP开发方案，底层原理和React-Native一致，都是通过核心引擎将代码编译成原生组件。达到原生APP的体验效果。性能体验要优于Hybrid模式。
+
+它与Hybrid相比，大部分优缺点都是React-Native中有提到的，但与React-Native相比，它又有如下的优缺点:
+
+#### 优点
+
+* 一套代码跨平台，只要遵循特定的语法规则，完全可以达到一套代码多个平台运行
+	* 核心就是在web环境下，将源码编译成web中显示的Html dom对象等，在原生环境下编译成原生组件。
+	* 而React-Native中，它是JS写原生代码，不同平台代码是不一样的，虽然有大部分可以复用，但并不是完全一套代码多个平台。
+* 语法接近H5，基本用法和H5一致，特别是后来改成了支持VUE.JS后，使用起来更是很方便。
+
+#### 缺点
+
+* 目前来说，社区相比React-Native不足，是一个比较大的缺点
+* 目前相比React-Native是新生，坑更多一点
+
 ## 分析
 
 ### 各大开发模式直观对比
@@ -175,7 +192,7 @@ Facebook发起的开源的一套新的APP开发方案,Facebook在当初深入研
 * 这种模式可以用原生来实现要求高的界面,对于一些比较通用型,展示型的页面完全可以用web来实现,达到跨平台效果,提升效率
 * 当然了,一般好一点的Hybrid方案,都会把资源放在本地的,可以减少网络流量消耗
 
-#### 选择React Native App模式的情况
+#### 选择React Native App模式(或weex模式)的情况
 
 * 追求性能,体验,同时追求开发效率,而且有一定的技术资本,舍得前期投入
 	* React Native这种模式学习成本较高,所以需要前期投入不少时间才能达到较好水平,但是有了一定水准后,开发起来它的优势就体现出来了,性能不逊色原生,而且开发速度也很快

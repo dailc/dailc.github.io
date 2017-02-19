@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Hybrid APP基础篇(四)->JSBridge实现原理
+title:      Hybrid APP基础篇(四)->JSBridge实现原理与示例
 category: blog
 tags: Hybrid
 favour: Hybrid
-description: JSBridge实现原理。包括了相应的示例实现项目源码。
+description: JSBridge实现原理与示例。包括了相应的示例实现项目源码。
 ---
 
 
@@ -266,5 +266,3 @@ github上有一个开源项目,它里面的JSBridge做法在iOS上进一步优�
 * [Hybrid APP架构设计思路](http://www.tuicool.com/articles/yeeABzJ)
 * [【Android】如何写一个JsBridge](http://www.cnblogs.com/xesam/p/5402985.html)
 * [IOS之URL Scheme的使用](http://blog.csdn.net/wbw1985/article/details/26264029)
-
-iOS10中bug?  因为JSBridge需要遵循urlscheme格式了
