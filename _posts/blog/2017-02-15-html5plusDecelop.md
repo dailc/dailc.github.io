@@ -130,4 +130,4 @@ description: Html5+开发的个人经历，如何接触，如何入门，为何�
 
 ### 相关介绍博文
 
-[暂且参考这系列hybrid介绍文章](http://www.cnblogs.com/dailc/p/5930231.html)
+[跨平台开发-Hybrid App系列](http://www.jianshu.com/p/4c462786149d)
