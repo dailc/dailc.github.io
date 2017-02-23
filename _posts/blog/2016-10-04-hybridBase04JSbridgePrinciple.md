@@ -79,6 +79,8 @@ JSBridge是Native代码与JS代码的通信桥梁。目前的一种统一方案�
 * 如图
 	* ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_2.png) 
 
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_2.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_2.png)
+
 ### 第二步:JS如何调用Native
 在第一步中,我们定义好了全局桥对象,可以我们是通过它的callHandler方法来调用原生的,那么它内部经历了一个怎么样的过程呢？如下
 
