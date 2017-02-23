@@ -12,6 +12,9 @@ description: JSBridge实现原理与示例。包括了相应的示例实现项�
 
 ### 写在前面的话
 
+**20170223更新**
+将图片都附上大图路径，方便查看
+
 **20170219更新**
 将稿子重新整理成MD形式了
 
@@ -32,6 +35,9 @@ description: JSBridge实现原理与示例。包括了相应的示例实现项�
 JSBridge是Native代码与JS代码的通信桥梁。目前的一种统一方案是:H5触发url scheme->Native捕获url scheme->原生分析,执行->原生调用h5。如下图
 
 ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_1.png)
+
+
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_3.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_3.png)
 
 ### url scheme介绍
 上图中有提到url scheme这个概念,那这到底是什么呢?
@@ -58,6 +64,8 @@ JSBridge是Native代码与JS代码的通信桥梁。目前的一种统一方案�
 
 如下图:
 ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_3.png)
+
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_3.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_3.png)
 
 ### 第一步:设计出一个Native与JS交互的全局桥对象
 我们规定,JS和Native之间的通信必须通过一个H5全局对象JSbridge来实现,该对象有如下特点
@@ -208,8 +216,12 @@ github上有一个开源项目,它里面的JSBridge做法在iOS上进一步优�
 #### JSBridge对象图解
 ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_4.png)
 
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_4.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_4.png)
+
 ####　JSBridge实现完整流程
 ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_5.png)
+
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_5.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_5.png)
 
 #### 注意
 由于这次完善的核心是:Native主动调用JS函数,并获取返回值。而在Android4.4以前,Android是没有这个功能的,所以并不完全适用于Android
@@ -221,6 +233,8 @@ github上有一个开源项目,它里面的JSBridge做法在iOS上进一步优�
 
 ### 完整调用流程图
 ![](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_6.png)
+
+查看大图 [https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_6.png](https://dailc.github.io/staticResource/blog/hybrid/jsbridge/img_hybrid_base_jsbridgePrinciple_6.png)
 
 如上图,结合上述方案后有了一套统一JSBridge方案
 
