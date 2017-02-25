@@ -200,4 +200,4 @@ RN和Weex技术都是一个体系，与现存的传统HTML+JS开发模式有所�
 ## 附录
 
 ### 原文链接
-[https://dailc.github.io/2017/02/25/traditionalCompaniesCannotPromoteRNAndWeex.html](https://dailc.github.io/2017/02/15/html5plusDecelop.html)
+[https://dailc.github.io/2017/02/25/traditionalCompaniesCannotPromoteRNAndWeex.html](https://dailc.github.io/2017/02/25/traditionalCompaniesCannotPromoteRNAndWeex.html)
