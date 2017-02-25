@@ -16,9 +16,9 @@ description: React-Native已经出来很久，很成熟了，很多公司都已�
 
 * 传统软件公司的特点
 * 传统软件公司的技术现状
-* React-Native技术简介
-* 推广React-Native的成本与收益
-* 为什么在传统软件公司无法推广React-Native
+* React-Native(Weex)技术简介
+* 推广React-Native(Weex)的成本与收益
+* 为什么在传统软件公司无法推广React-Native(Weex)
 
 ## 传统软件公司的特点
 这里仅是以点见面，以偏概全的举例，便于下文更好分析而已，并不是就意味着在批判传统软件公司(笔者也自认为没有这种资格，它们能存在，并且好好的存在，显示是有它的理由的)
