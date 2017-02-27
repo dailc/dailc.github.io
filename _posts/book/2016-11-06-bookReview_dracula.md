@@ -5,7 +5,7 @@ tags: 读后感 英文读本
 favour: 读后感
 bookType: readed
 cover: https://img5.doubanio.com/lpic/s1456606.jpg
-title:      吸血鬼
+title: 吸血鬼
 title_en: (DRACULA)
 description: 故事以日记的风格展开，讲述了地产商人Jonathan Harker,与其妻子Mina,其妻子好友Lucy,热心医生 DR. Seward 以及牺牲的勇士Quincey与邪恶的吸血鬼Count Dracula之间的故事。
 ---
