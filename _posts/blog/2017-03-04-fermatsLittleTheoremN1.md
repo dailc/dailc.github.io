@@ -13,7 +13,7 @@ description: 求n最小为多大时，n个1组成的整数能被2013整除？这
 原题链接[https://segmentfault.com/q/1010000008553427/a-1020000008559091](https://segmentfault.com/q/1010000008553427/a-1020000008559091)
 
 ## 思路与大纲
-遇到这个问题时，第一个想法就是先用代码进行暴力破解，然后又发现种整数整除问题可以用费马小定理进行分析，于是就有了以下回答题纲:
+遇到这个问题时，第一个想法就是先用代码进行暴力破解，然后又发现整数整除问题可以用费马小定理进行分析，于是就有了以下回答题纲:
 
 * 代码解法(JS实现)
 * 数论解法(费马小定理)
@@ -101,8 +101,7 @@ console.log('n:' + num + ',len:' + getMinDividedNum(num));
 
 因此得出了结论:  **n至少为60时，n个1组成的数能够被2013整除**
 
-
 ## 附录
 
 ### 原文链接
-[https://dailc.github.io/2017/03/04/FermatsLittleTheoremN1.html](https://dailc.github.io/2017/03/04/FermatsLittleTheoremN1.html)
+[https://dailc.github.io/2017/03/04/fermatsLittleTheoremN1.html](https://dailc.github.io/2017/03/04/fermatsLittleTheoremN1.html)
