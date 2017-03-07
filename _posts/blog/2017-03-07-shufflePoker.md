@@ -10,6 +10,7 @@ description: 洗牌算法的一个实际应用实例，基于洗牌算法实现�
 ## 前言
 在逛`segmentfault`论坛时，遇到了这样一个提问: **如何实现扑克牌的随机发牌算法？**
 然后花了点时间解答，顺便记录于本文之中。
+
 原题链接: [https://segmentfault.com/q/1010000008581427/a-1020000008584021](https://segmentfault.com/q/1010000008581427/a-1020000008584021)
 
 ## 思路与大纲
@@ -131,6 +132,9 @@ console.log(poker.pokers);
 这个算法相比原生算法，直接将时间复杂度缩小到了`O(N)`
 
 ## 附录
+
+### 参考资料
+[https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/](https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/)
 
 ### 原文链接
 [https://dailc.github.io/2017/03/07/shufflePoker.html](https://dailc.github.io/2017/03/07/shufflePoker.html)
