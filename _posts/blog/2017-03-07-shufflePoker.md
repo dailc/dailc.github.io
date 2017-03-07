@@ -109,7 +109,7 @@ console.log(poker.pokers);
 以上代码其实是属于现代优化方法的。以下分别介绍原始算法与现代方法。
 
 ### 原始洗牌算法
-也称为`Fisher–Yates shuffle的原始版，实现如下:
+也称为`Fisher–Yates shuffle`的原始版，实现如下:
 
 * `1-N`存储在原始列表list1中 
 * 随机洗好的牌存储在新列表list2中
