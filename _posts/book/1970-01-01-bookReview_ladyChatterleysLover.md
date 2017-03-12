@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: toread
+bookType: reading
 cover: https://img5.doubanio.com/lpic/s4380316.jpg
 title: 查泰莱夫人的情人
 title_en: (Lady Chatterley's Lover)
@@ -14,4 +14,4 @@ description: 《查泰莱夫人的情人》是劳伦斯争议最大的小说，�
 《查泰莱夫人的情人》是劳伦斯争议最大的小说，也是他最后一部小说。曾被禁长达30余年，透视了英国图书审查制度的野蛮和无知。30年后终因对人性的深度描写以及对社会批判的严肃性而被解禁。只要我们潜心进入劳伦斯的世界，我们就会发现，他是用男女的自然感情和健康交往来对抗资本主义工业文明对自然和人性的侵蚀。
 
 ## 一些想法
-想读...
+在读...
