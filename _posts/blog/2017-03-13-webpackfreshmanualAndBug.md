@@ -329,6 +329,19 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 * 原因是，以前这个项目中曾经有安装过node-sass，但是安装失败了，导致node_modules里一直记录了这个任务，后续安装时都会先尝试去安装它。
 * 解决:去node_modules目录下，删除与node-sass这个依赖包的相关内容(可以全局搜索)，重新安装即可
 
+### 问题十四:`sourceMap`配置带来的问题
+**说明:**在使用sourceMap时，遇到了以下问题
+
+**one:**(uglify压缩去掉了sourceMap)
+
+* 在使用sourceMap时，由于用到了uglify压缩插件，所以默认去除了js尾部的注释，导致无法找到map文件
+* 解决: uglify插件加上如下配置
+
+```
+sourceMap:true,
+```
+
+* 另外config里的output可以配置`sourceMapFilename:'maps/[name].map'`，将map文件放入maps文件夹中
 
 ## 示例Demo
 本次进行webpack学习时。依次安装功能递增，循序渐进的写了多个demo(每一个均可正常运行)，每一个demo都有自身的`READEME.MD`说明，目录结构如下；
@@ -361,4 +374,3 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ### 原文链接
 * [https://dailc.github.io/2017/03/13/webpackfreshmanualAndBug.html](https://dailc.github.io/2017/03/13/webpackfreshmanualAndBug.html)
-
