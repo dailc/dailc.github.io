@@ -8,7 +8,9 @@ description: 整理一些Webpack入门过程中遇到的那些坑，最后有提
 ---
 
 ## 前言
-网上关于webpack的教程已经数不胜数了，也无意再重新写一篇复制文。但是实际操作过程中，发现各种教程版本都不一致，有的教程已经过时了，有的教程模糊不清，因此还是遇到了各种问题，因此特将自身实际操作过程中遇到的问题记录下来，也希望能给他人带来帮助！
+网上关于webpack的教程已经数不胜数了，也无意再重新写一篇复制文。但是实际操作过程中，发现各种教程版本都不一致，有的教程已经过时了，有的教程模糊不清，因此还是遇到了各种问题，因此特将自身实际操作过程中遇到的问题记录下来，并附上相应的示例demo，也希望能给他人带来帮助！
+
+本文主要是记录的一些遇到的问题以及提供了示例，如果想要看入门教程还是去官网上或者参考参考资源中的链接。
 
 问题记录较多，想要直接看示例Demo的请拉到最下方。
 
@@ -62,7 +64,7 @@ loaders: [{
 
 ```
 //头部引入css打包插件
-const ExtractTextPlugin = require(["extract-text-webpack-plugin"]);
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 //声明对应的loaders
 loaders: [{
@@ -88,7 +90,7 @@ plugins: [
 ```
 loaders: [{
   test: /\.css$/,
-  loader: ExtractTextPlugin.extract("style-loader","css-loader")
+  loader: ExtractTextPlugin.extract(["style-loader","css-loader"])
 }],
 ```
 **解决:**原因是这种写法已经过时，根据命令台中的提示，修改为最新写法即可:
@@ -193,7 +195,7 @@ loaders: [{
 
 ```
 本来应该是路径 ../img.***.img
-结果直接就变成了imng/***.img 
+结果直接就变成了 img/***.img 
 导致路径不一致
 ```
 
@@ -350,7 +352,6 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ### 源码地址:
 系列demo的源码地址是: [https://github.com/dailc/webpackFreshmanual](https://github.com/dailc/webpackFreshmanual)
 
-
 ## 附录
 
 ### 参考资料
@@ -360,3 +361,4 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ### 原文链接
 * [https://dailc.github.io/2017/03/13/webpackfreshmanualAndBug.html](https://dailc.github.io/2017/03/13/webpackfreshmanualAndBug.html)
+
