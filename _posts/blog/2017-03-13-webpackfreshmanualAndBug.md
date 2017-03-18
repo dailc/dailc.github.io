@@ -176,7 +176,10 @@ loaders: [{
 
 ```
 loaders: [{
-  test: /[^((?!\.min\.css).)*$]\.css$/,
+  //20170314更新:以下是错误写法，比如common.css也无法匹配的
+  //test: /[^((?!\.min\.css).)*$]\.css$/,
+  //以下是正确写法
+  test: /^((?!\.min\.css).)*\.css/,
   loader: ExtractTextPlugin.extract({
     fallback: "style-loader",
     use: "css-loader?minimize&-autoprefixer"
@@ -343,6 +346,66 @@ sourceMap:true,
 
 * 另外config里的output可以配置`sourceMapFilename:'maps/[name].map'`，将map文件放入maps文件夹中
 
+### 问题十五:`htmlPagePluginConfig`配置带来的问题
+**20170318更新**
+**说明:** 同时引入了`html-loader`和`html-webpack-plugin`后，两个插件都设置了minify属性，则会编译生成时报错，错误配置如下:
+
+```
+loader: 'html-loader',
+options: {
+  minimize: config.isRelease ? true : false,
+}
+
+new HtmlWebpackPlugin({
+  ***
+  minify: config.isRelease ? {
+    collapseWhitespace: true,
+    collapseBooleanAttributes: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    minifyJS: true,
+    minifyCSS: true
+}: null,
+ 
+})
+```
+
+**解决:**只需要将HtmlWebpackPlugin中对应的minify属性去掉即可。
+
+### 问题十六:`webpack`中JS手动引入的图片问题
+**20170318更新**
+**说明:** webpack是万物皆模块，但也就是说，不通过require引入的就不会算成模块了(插件中的另算，那是处理过的)。所以，在JS中手动引入图片时会遇到问题就是对应的图片并不会被打包，导致之后找不到路径。如下:
+
+```
+var GalleryData = [{
+    id: "testgallery1",
+    title: "",
+    //为空
+    //保持目录结构
+    url: "../../static/img/gallery/img_testgallery1.jpg"
+},
+{
+    id: "testgallery2",
+    title: "",
+    //为空
+    url: "../../static/img/gallery/img_testgallery2.jpg"
+}];
+```
+以上的url就是引入的源码本地图片，但是却发现并不会被打包出来。
+
+**解决:** 
+
+* 将以上的`static`文件夹作为静态资源，用`copy-webpack-plugin`插件提取出来(这时候需要遵守的一个约定就是`static`文件夹下的是专门给js引入或者外部资源访问的，平时正常的css,html中的引入请放入其它文件夹中，比如`img`，避免相互影响，这就是约定大于配置)
+
+* 或者，通过require引入图片后再设置，如下:(但是这样会破坏代码结构，个人并不建议)
+
+```
+var imgUrl = require('./images/bg.jpg'),
+imgTempl = '![]('+imgUrl+')';
+```
+
 ## 示例Demo
 本次进行webpack学习时。依次安装功能递增，循序渐进的写了多个demo(每一个均可正常运行)，每一个demo都有自身的`READEME.MD`说明，目录结构如下；
 
@@ -359,7 +422,9 @@ sourceMap:true,
 ├
 ├── 06withHashStaticAndRelease	# 基于第5个进行拓展，增加了`CopyWebpackPlugin`复制静态资源，增加了`chunkhash`,`contenthash`等指纹签名功能，增加了`alias`别名设置，增加了release版本和dev版本的开关
 ├   
-└── 07withLocalServer	# 基于第6个进行拓展，增加了一个`api-server`，来写本地测试接口(已经进行了跨域配置)
+├── 07withLocalServer	# 基于第6个进行拓展，增加了一个`api-server`，来写本地测试接口(已经进行了跨域配置)
+├   
+└── 08withFamilyBucket	# 基于第7个进行拓展，webpack全家桶项目，增加了`source-map`，增加了`assets-webpack-plugin`等等
 ```
 
 ### 源码地址:
