@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: toread
+bookType: reading
 cover: https://img3.doubanio.com/lpic/s4236431.jpg
 title: 傲慢与偏见
 title_en: (Pride And Prejudice)
@@ -15,4 +15,4 @@ description: 本书被列为经久不衰的世界十大小说名著之一，作�
 本书以男女青年的恋爱婚姻为题材。然而，同其他作品不同的是，这部小说以男女主人公的爱情纠葛为主线，共计描写了四起姻缘，是作者最富于喜剧色彩，也最引人入胜的一部作品。《傲慢与偏见》实属世界文库中不可多得的珍品，难怪毛姆将其列入世界十大小说名著之一。
 
 ## 一些想法
-想读...
+在读...

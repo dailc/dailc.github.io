@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: reading
+bookType: readed
 cover: https://img5.doubanio.com/lpic/s4380316.jpg
 title: 查泰莱夫人的情人
 title_en: (Lady Chatterley's Lover)
