@@ -283,6 +283,20 @@ http://localhost:8080
 * 从而导致了提示`Project is running at http://http://localhost:8080/`，所以只需要改成正常配置即可
 * 另外需要注意的是，如果想要`iframe`刷新，inline和hot都要是false
 
+
+**five:**(20170322更新)
+
+* `webpack-dev-server`默认只能在localhost访问，换为内网ip就不行了(比如192.×××，就算是本机也不行的)
+* 解决: 修改server的默认配置，如
+
+```
+//这个配置可以运行其它机器访问
+host: '0.0.0.0',
+
+//或者运行时
+-- host  0.0.0.0
+```
+
 ### 问题十二:`hash`与`chunkhash`造成的问题
 **说明:**项目发布时，为了解决缓存，需要进行md5签名，这时候就需要用到`hash`和`chunkhash`等了，但是却遇到了如下问题:(hash系列问题的解决大多参考了参考来源中的博客)
 
