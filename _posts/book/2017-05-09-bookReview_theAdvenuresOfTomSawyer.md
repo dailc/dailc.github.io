@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: reading
+bookType: readed
 cover: https://img3.doubanio.com/lpic/s1158254.jpg
 title: 汤姆·索亚历险记
 title_en: (The Adventures Of Tom Sawyer)
