@@ -25,17 +25,17 @@ description: H5下拉刷新，统一了API，抽取了基类，提供了各式�
 提供了多种皮肤样式供选择。
 
 * 效果1
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect1.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect1.gif)
 * 效果2
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect2.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect2.gif)
 * 效果3
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect3.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect3.gif)
 * 效果4
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect4.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect4.gif)
 * 效果5
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect5.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect5.gif)
 * 效果6
-  ![](https://dailc.github.io/pullToRefresh-h5-iscroll/staticresource/img/effect6.gif)
+  ![](https://dailc.github.io/pulltorefresh-h5-iscroll/staticresource/img/effect6.gif)
 
 ## 有何特点
 这个下拉刷新库的最大特点就是:
@@ -114,7 +114,7 @@ description: H5下拉刷新，统一了API，抽取了基类，提供了各式�
 ## 示例与源码
 源码与示例请参考`github`地址:
 
-[https://github.com/dailc/pullToRefresh-h5-iscroll](https://github.com/dailc/pullToRefresh-h5-iscroll)
+[https://github.com/dailc/pulltorefresh-h5-iscroll](https://github.com/dailc/pulltorefresh-h5-iscroll)
 
 或者可以戳这里看下示例页面:
-[https://dailc.github.io/pullToRefresh-h5-iscroll/examples/html/](https://dailc.github.io/pullToRefresh-h5-iscroll/examples/html/)
+[https://dailc.github.io/pulltorefresh-h5-iscroll/examples/html/](https://dailc.github.io/pulltorefresh-h5-iscroll/examples/html/)
