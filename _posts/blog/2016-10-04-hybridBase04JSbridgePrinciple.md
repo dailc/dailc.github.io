@@ -260,12 +260,12 @@ github上有一个开源项目,它里面的JSBridge做法在iOS上进一步优�
 ### 基础版本的JSBridge
 这里只介绍JS的实现,具体Android,iOS实现请参考完整版本,实现如下
 
-由于篇幅有限，已经移步到了github上 [https://github.com/dailc/hybrid_jsbridge_simple/blob/master/android/app/src/main/assets/JSbridge.js](https://github.com/dailc/hybrid_jsbridge_simple/blob/master/android/app/src/main/assets/JSbridge.js)
+由于篇幅有限，已经移步到了github上 [https://github.com/dailc/hybrid-jsbridge-simple/blob/master/android/app/src/main/assets/JSbridge.js](https://github.com/dailc/hybrid-jsbridge-simple/blob/master/android/app/src/main/assets/JSbridge.js)
 
 ### 完整的实现示例
 请参考下述示例，有完整的Andoid原生和H5端交互的示例。
 
-[https://github.com/dailc/hybrid_jsbridge_simple](https://github.com/dailc/hybrid_jsbridge_simple)
+[https://github.com/dailc/hybrid-jsbridge-simple](https://github.com/dailc/hybrid-jsbridge-simple)
 
 
 ## 附录
