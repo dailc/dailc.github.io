@@ -77,7 +77,7 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 普通横向瀑布流
 这种瀑布流方式常常用于和js绝对布局方式比较，但是虽然从显示上来说，效果差不多，但是从用户体验的角度讲，这个不符合平常的习惯，以下是两种方式的效果图对比
-![](https://dailc.github.io/showDemo/staticresource/waterfallflow/demo_js_waterfallflow_2.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/waterfallflow/demo_js_waterfallflow_2.png)
 
 #### 实现代码
 
@@ -96,7 +96,7 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 固定列数的瀑布流
 这种布局用到比较少，但是某些面试题会经常提到，效果如下
-![](https://dailc.github.io/showDemo/staticresource/waterfallflow/demo_js_waterfallflow_4.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/waterfallflow/demo_js_waterfallflow_4.png)
 
 #### 实现代码
 
@@ -115,14 +115,14 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 示例与源码
 想看示例页面可以戳一戳 
-[css3瀑布流效果](https://dailc.github.io/showDemo/waterfallflow/demo_waterfall_flow_css3.html)
+[css3瀑布流效果](https://dailc.github.io/jseffect-demo/waterfallflow/demo_waterfall_flow_css3.html)
 源码可以查看
-[https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_css3.html](https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_css3.html)
+[https://github.com/dailc/jseffect-demo/blob/master/waterfallflow/demo_waterfall_flow_css3.html](https://github.com/dailc/jseffect-demo/blob/master/waterfallflow/demo_waterfall_flow_css3.html)
 
 
 ## js绝对布局瀑布流实现
 这种实现方式是最为经典的，也是运营的最多的，网上也有很多的原生或jq插件，本文这里也用原生js重新封装了一个类库，方便调用，效果如图
-![](https://dailc.github.io/showDemo/staticresource/waterfallflow/demo_js_waterfallflow_1.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/waterfallflow/demo_js_waterfallflow_1.png)
 
 
 ### 实现思路
@@ -139,10 +139,10 @@ css实现瀑布流分为两种效果，**普通横向瀑布流**与**固定列�
 
 ### 示例与源码
 想看示例页面可以戳一戳 
-[js瀑布流效果](https://dailc.github.io/showDemo/waterfallflow/demo_waterfall_flow_js.html)
+[js瀑布流效果](https://dailc.github.io/jseffect-demo/waterfallflow/demo_waterfall_flow_js.html)
 
 源码可以查看
-[https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_js.html](https://github.com/dailc/showDemo/blob/master/waterfallflow/demo_waterfall_flow_js.html)
+[https://github.com/dailc/jseffect-demo/blob/master/waterfallflow/demo_waterfall_flow_js.html](https://github.com/dailc/jseffect-demo/blob/master/waterfallflow/demo_waterfall_flow_js.html)
 
 ## 原文地址
 原文在我个人博客上面
