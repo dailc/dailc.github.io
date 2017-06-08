@@ -26,7 +26,7 @@ description: 一个通用的滑动、轮播组件，同时支持3D效果和2D效
 双向循环链表原理比较简单，这里不再赘述
 
 ### 实现
-实现了一个双向链表，支持循环和非循环，参考 [https://github.com/dailc/jsDataStruct](https://github.com/dailc/jsDataStruct)
+实现了一个双向链表，支持循环和非循环，参考 [https://github.com/dailc/jsfoundation-datastruct](https://github.com/dailc/jsfoundation-datastruct)
 
 
 ## 2D滑动组件的实现
@@ -66,11 +66,11 @@ E(-2W)，D(-W)，A(0)，B(W)，C(2W)。
 
 ### 原理流程
 以下为上述中向右滑动一位，的过程图述
-![](https://dailc.github.io/showDemo/staticresource/carrousel/demo_js_carrousel_3.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/carrousel/demo_js_carrousel_3.png)
 
 ### 效果预览
 下图是将item的宽度设为屏幕50%后的2D滑动效果
-![](https://dailc.github.io/showDemo/staticresource/carrousel/demo_js_carrousel_1.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/carrousel/demo_js_carrousel_1.png)
 
 ## 3D滑动组件的进一步实现
 上述过程中实现了2D滑动组件，那么带3D组件的组件该如何实现呢？毕竟最初的需求就是3D效果。
@@ -79,7 +79,7 @@ E(-2W)，D(-W)，A(0)，B(W)，C(2W)。
 
 ### 最终效果图示
 最终我们需要实现如图所示的3D滑动效果
-![](https://dailc.github.io/showDemo/staticresource/carrousel/demo_js_carrousel_2.png)
+![](https://dailc.github.io/jseffect-demo/staticresource/carrousel/demo_js_carrousel_2.png)
 
 ### 基本3D坐标轴
 我们将屏幕左上角看成原点。那么
@@ -137,12 +137,12 @@ E(-2W)，D(-W)，A(0)，B(W)，C(2W)。
 ## 源码及效果
 
 ### 效果展示
-[通用滑动组件实现示例(2D,3D)](https://dailc.github.io/showDemo/carrousel/demo_carrousel_index.html)
+[通用滑动组件实现示例(2D,3D)](https://dailc.github.io/jseffect-demo/carrousel/demo_carrousel_index.html)
 
-[滑动组件拓展，3d图片轮播示例](https://dailc.github.io/showDemo/carrousel/demo_carrousel_gallerySlider.html)
+[滑动组件拓展，3d图片轮播示例](https://dailc.github.io/jseffect-demo/carrousel/demo_carrousel_gallerySlider.html)
 
 ### 源码
-[一个H5的3D滑动组件实现(兼容2D模式)](https://github.com/dailc/showDemo/tree/master/carrousel)
+[一个H5的3D滑动组件实现(兼容2D模式)](https://github.com/dailc/jseffect-demo/tree/master/carrousel)
 
 ## 原文地址
 原文在我个人博客上面
