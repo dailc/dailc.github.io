@@ -451,7 +451,7 @@ imgTempl = '![]('+imgUrl+')';
 ```
 
 ### 源码地址:
-系列demo的源码地址是: [https://github.com/dailc/webpackFreshmanual](https://github.com/dailc/webpackFreshmanual)
+系列demo的源码地址是: [https://github.com/dailc/webpack-freshmanual](https://github.com/dailc/webpack-freshmanual)
 
 ## 附录
 
