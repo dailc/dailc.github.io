@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: toread
+bookType: readed
 cover: https://img1.doubanio.com/lpic/s6002078.jpg
 title: 黑骏马
 title_en: (Black Beauty)
