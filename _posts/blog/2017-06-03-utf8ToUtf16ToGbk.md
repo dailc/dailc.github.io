@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      【字符编码系列】JavaScript使用的编码-UCS-2
+title:      【字符编码系列】GBK，UTF-8，UTF-16之间的转换
 category: blog
 tags: 字符编码
 favour: 字符编码
-description: 字符编码系列文章之一，介绍Javascript使用的内置编码UCS-2，介绍UCS-2与UTF-16的区别。
+description: 字符编码系列文章之一，GBK，UTF-8，UTF-16之间的转换
 ---
 
 ## 写在前面的话
