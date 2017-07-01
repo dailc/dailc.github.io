@@ -25,7 +25,7 @@ demoTag: project
 #多说插件使用自己的 short_name
 duoshuo_shortname: dailc
 #百度统计标识
-baidu_analytics_id: cf8506e0ef223e57ff6239944e5d46a4
+baidu_analytics_id: 0ad542bd5ce7bd628fd6b892a2bef1fc
 
 url: https://dailc.github.io
 title: Dailc的个人主页
