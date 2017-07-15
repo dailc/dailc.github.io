@@ -59,7 +59,6 @@ h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
 p { margin: 0 0 10px;line-height:1.8em;}
 blockquote {padding: 10px 20px;margin: 0 0 20px;font-size: 17.5px;border-left: 5px solid #eee;}
 ol,ul {
-    list-style-position: inside;
     border: rgb(226, 222, 222);
     border-style: solid;
     border-width: 1px;
