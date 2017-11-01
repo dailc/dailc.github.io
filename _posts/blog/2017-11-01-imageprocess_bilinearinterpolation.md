@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      【图像缩放】双线性
+title:      【图像缩放】双线性插值
 category: blog
 tags: 图像缩放 插值算法 算法
 favour: 图像插值算法
