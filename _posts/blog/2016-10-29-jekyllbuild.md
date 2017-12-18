@@ -310,6 +310,115 @@ apt-get install ruby2.0-dev（版本必须正确）
 gem install rdiscount -V
 ```
 
+## mac中搭建jekyll过程
+
+mac中比较方便，因为一般mac是自带ruby和gem的
+
+如果没有ruby
+
+```js
+brew install ruby
+```
+
+注意，gem安装jekyll需要ruby 1.9.2以上版本，现在官方推荐的是1.9.3
+
+如果版本低于，请升级
+
+### gem的换源
+
+虽然自带gems，但在国内，默认的源是被墙住的，因此需要重新设置淘宝源（感谢阿里）
+
+```js
+gem sources --remove https://rubygems.org/
+gem sources -a http://ruby.taobao.org/
+gem sources -l
+```
+
+最后确保只剩一个淘宝源即可
+
+### 安装jekyll
+
+```js
+gem install jekyll
+```
+
+安装完后，即可使用了
+
+```js
+jekyll build
+jekyll server
+...
+```
+
+### 权限错误问题
+
+如果遇到权限问题，无法安装上，可以使用管理员权限安装
+
+```js
+sudo gem install jekyll
+```
+
+### ruby版本过低问题
+
+如果提示
+
+```js
+requires Ruby version >= 2.1.
+```
+
+那么是由于ruby版本过低造成的，更新ruby
+
+1.先安装rvm
+
+```js
+curl -L get.rvm.io | bash -s stable
+```
+
+2.开启rvm
+
+```js
+source ~/.bashrc
+
+source atom .bash_profile
+(添加：export PATH=/usr/local/bin:$PATH)
+
+source ~/.bash_profile
+```
+
+3.测试是否安装正常
+
+```js
+rvm -v
+```
+
+4.安装homebrew
+
+```js
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+5.使用rvm安装新版本的ruby
+
+```js
+rvm install 2.2.4
+或者
+brew install ruby
+```
+
+6.检测版本是否正常
+
+```js
+ruby -v
+```
+
+### 其它报错
+
+如果遇到`It looks like you don't have jekyll-paginate`
+
+```js
+gem install jekyll-paginate
+```
+
 ## 总结
 虽然说在windows上和linux上搭建 jekyll时遇到了各种各样问题，但是最终都解决了，在解决的那一瞬间，其实是挺有满足感的*(大概这也是我喜欢捣鼓这些东西的愿意之一吧)*，而且确实感觉自己知识面比起以前还是有所拓展的。
 
