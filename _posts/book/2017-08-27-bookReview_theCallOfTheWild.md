@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: reading
+bookType: readed
 cover: https://img3.doubanio.com/lpic/s2059832.jpg
 title: 野性的呼唤
 title_en: (The Call Of The Wild)
