@@ -24,6 +24,10 @@ demoTag: project
 #excerpt_separator: "\n\n\n\n"
 #多说插件使用自己的 short_name
 duoshuo_shortname: dailc
+#畅言插件
+changyan_sid: dailcblog
+changyan_appid: cytnL4xnw
+changyan_conf: prod_6546e9cbdc48853a518991182e2806a2
 #百度统计标识
 baidu_analytics_id: 0ad542bd5ce7bd628fd6b892a2bef1fc
 
