@@ -118,14 +118,14 @@ ajax请求时,如果存在跨域现象,并且没有进行解决,会有如下表�
 jsonp解决跨域问题是一个比较古老的方案(实际中不推荐使用),这里做简单介绍(实际项目中如果要使用JSONP,一般会使用JQ等对JSONP进行了封装的类库来进行ajax请求)
 
 #### 实现原理
-JSONP之所以能够用来解决跨域方案,主要是因为 <script> 脚本拥有跨域能力,而JSONP正是利用这一点来实现。具体原理如图
+JSONP之所以能够用来解决跨域方案,主要是因为 `<script>` 脚本拥有跨域能力,而JSONP正是利用这一点来实现。具体原理如图
 
 ![](https://dailc.github.io/staticResource/blog/basicKnowledge/ajax/img/img_ajax_crossDomain_4.png)
 
 #### 实现流程
 JSONP的实现步骤大致如下(参考了来源中的文章)
 
-* 客户端网页网页通过添加一个<script>元素，向服务器请求JSON数据，这种做法不受同源政策限制
+* 客户端网页网页通过添加一个`<script>`元素，向服务器请求JSON数据，这种做法不受同源政策限制
   
 ```
 function addScriptTag(src) {
@@ -153,7 +153,7 @@ foo({
 });						
 ```
 
-* 由于<script>元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了foo函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。
+* 由于`<script>`元素请求的脚本，直接作为代码运行。这时，只要浏览器定义了foo函数，该函数就会立即调用。作为参数的JSON数据被视为JavaScript对象，而不是字符串，因此避免了使用JSON.parse的步骤。
 注意,一般的JSONP接口和普通接口返回数据是有区别的,所以接口如果要做JSONO兼容,需要进行判断是否有对应callback关键字参数,如果有则是JSONP请求,返回JSONP数据,否则返回普通数据
 
 **使用注意**
@@ -295,6 +295,42 @@ JAVA后台配置只需要遵循如下步骤即可:
 
 * 第四步:可能的安全模块配置错误(注意，某些框架中-譬如公司私人框架，有安全模块的，有时候这些安全模块配置会影响跨域配置，这时候可以先尝试关闭它们)
 
+#### JAVA Spring Boot配置
+
+__20171230补充__
+
+仅列举简单的全局配置
+
+```js
+@Configuration
+public class CorsConfig {
+
+    private CorsConfiguration buildConfig() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        
+        // 可以自行筛选
+        corsConfiguration.addAllowedOrigin("*");
+        corsConfiguration.addAllowedHeader("*");
+        corsConfiguration.addAllowedMethod("*");
+        
+        return corsConfiguration;
+    }
+
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        
+        source.registerCorsConfiguration("/**", buildConfig());
+        
+        return new CorsFilter(source);  
+    }
+}
+```
+
+新建配置，然后添加Configuration注解即可配置成功
+
+_PS：这一部分方法是收录的，没有亲身实践过，但根据反馈，理论上可行_
+
 #### NET后台配置
 .NET后台配置可以参考如下步骤:
 
@@ -394,6 +430,7 @@ Access-Control-Allow-Origin: *
 * [浏览器同源政策及其规避方法(阮一峰)](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
 * [跨域资源共享 CORS 详解(阮一峰)](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 * [本人之前在cnblog上的文章](http://www.cnblogs.com/dailc/p/5893341.html)
+* [springboot配置跨域问题](https://segmentfault.com/q/1010000012649042/a-1020000012650988)
 
 ### 原文链接
 * [https://dailc.github.io/2017/03/22/ajaxCrossDomainSolution.html](https://dailc.github.io/2017/03/22/ajaxCrossDomainSolution.html)
