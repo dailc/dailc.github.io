@@ -77,7 +77,7 @@ __正文开始...__
 
 有这样一个说法：**如果某个Web应用具备良好的安全性，那么再怎么用“不安全的AJAX”也削弱不了它的安全性，反之如果应用本身存在漏洞，不管用何种技术请求，它都是不安全的**
 
-![](https://dailc.github.io/staticResource/blog/basicKnowledge/ajax/img/AJAX_safe_ornot.png)
+![](https://dailc.github.io/staticResource/blog/basicKnowledge/ajax/img/ajax_safe_ornot.png)
 
 为何会有这种说法？**因为在Web应用中，客户端输入不可信是一个基本原则**
 
