@@ -7,8 +7,6 @@ favour: ajax
 description: AJAX请求真的不安全么？谈谈Web安全与AJAX的关系。
 ---
 
-<small class="text-muted">维护人：戴荔春</small>
-
 ## 开篇三问
 
 1. AJAX请求真的不安全么？
@@ -550,6 +548,12 @@ SO，后台本身有漏洞，所以才导致被攻击，AJAX恰好是攻击的�
 这样的话，应该可以把AJAX不安全的锅甩掉了吧？
 
 ## 附录
+
+### 博客
+
+初次发布`2018.01.04`于我个人博客上面
+
+[http://www.dailichun.com/2018/01/04/security_ajaxissafeornot.html](http://www.dailichun.com/2018/01/04/security_ajaxissafeornot.html)
 
 ### 参考资料
 
