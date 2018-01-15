@@ -327,8 +327,8 @@ String sql = "SELECT * FROM  users  WHERE name = '" + name + "' AND password = '
 然而有攻击者分析出后台可能存在漏洞，尝试sql注入攻击，输入
 
 ```js
-name = ' or 1=1
-password = anything
+name = ''
+password = '' or 1=1
 ```
 
 那么这样，后台接收到数据后，实际上查询的结果是
@@ -340,6 +340,11 @@ SELECT * FROM  users  WHERE name = ' ' or 1=1  AND password = 'anything'
 故而，攻击者成功的绕过的用户名，利用后台漏洞登陆了。
 
 当然了，像这类这么低级的漏洞，现象几乎已经不存在了，往往这类型漏洞需要仔细分析，耗时。（又或者是有内奸。。。）
+
+**修正内容：**
+
+以前是将`or`语句放在`name`中，修正后放在`password`中，因为放name中只能匹配到和输入password相符合的，但是放password中，能匹配所有。
+另外加了`'`号补偿。
 
 ### SQL注入与AJAX的关系
 

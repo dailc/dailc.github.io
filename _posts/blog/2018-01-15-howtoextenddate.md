@@ -647,3 +647,5 @@ console.log(instance instanceof SuperClass);
 - [http://blog.csdn.net/github_36978270/article/details/71896444](http://blog.csdn.net/github_36978270/article/details/71896444)
 
 - [http://blog.csdn.net/pcaxb/article/details/53784309](http://blog.csdn.net/pcaxb/article/details/53784309)
+
+- [http://blog.csdn.net/kittyjie/article/details/50494915](http://blog.csdn.net/kittyjie/article/details/50494915)
