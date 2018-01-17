@@ -77,6 +77,8 @@ console.log(date.getTest());
 
 - 构造函数与实例对象
 
+- [[Class]]与Internal slot
+
 - 如何快速判断是否继承？
 
 - 写在最后的话
@@ -599,6 +601,60 @@ class MyDate extends Date {
 
 再回到结论：**实例对象不一定就是由它的原型上的构造函数构造的，有可能构造函数内部有着寄生等逻辑，偷偷的用另一个函数来构造了下**,
 当然，简单情况下，我们直接说实例对象由对应构造函数构造也没错（不过，在涉及到这种Date之类的分析时，我们还是得明白）。
+
+## [[Class]]与Internal slot
+
+__这一部分为补充内容。__
+
+前文中一直提到一个概念：**Date内部的`[[Class]]`标识**
+
+其实，严格来说，不能这样泛而称之（前文中只是用这个概念是为了降低复杂度，便于理解），它可以分为以下两部分：
+
+- 在ES5中，每种内置对象都定义了 [[Class]] 内部属性的值，[[Class]] 内部属性的值用于内部区分对象的种类
+
+    - `Object.prototype.toString`访问的就是这个[[Class]]
+    
+    - 规范中除了通过`Object.prototype.toString`，没有提供任何手段使程序访问此值。
+    
+    - 而且Object.prototype.toString输出无法被修改
+
+- 而在ES5中，之前的 [[Class]] 不再使用，取而代之的是一系列的`internal slot`
+
+    - Internal slot 对应于与对象相关联并由各种ECMAScript规范算法使用的内部状态，它们没有对象属性，也不能被继承
+    
+    - 根据具体的 Internal slot 规范，这种状态可以由任何ECMAScript语言类型或特定ECMAScript规范类型值的值组成
+    
+    - 通过`Object.prototype.toString`，仍然可以输出Internal slot值
+    
+    - **简单点理解（简化理解）**，Object.prototype.toString的流程是：如果是基本数据类型（除去Object以外的几大类型），则返回原本的slot，
+    如果是Object类型（包括内置对象以及自己写的对象），则调用`Symbol.toStringTag`
+    
+    - `Symbol.toStringTag`方法的默认实现就是返回对象的Internal slot，这个方法**可以被重写**
+    
+    
+这两点是有所差异的，需要区分（不过简单点可以统一理解为内置对象内部都有一个特殊标识，用来区分对应类型-不符合类型就不给调用）。
+
+JS内置对象是这些：
+
+```js
+"Arguments", "Array", "Boolean", "Date", "Error", "Function", "JSON", "Math", "Number", "Object", "RegExp", "String"
+```
+
+ES6新增的一些，这里未提到：（如Promise对象可以输出`[object Promise]`）
+
+而前文中提到的：
+
+```js
+Object.defineProperty(date, Symbol.toStringTag, {
+    get: function() {
+        return "Date";
+    }
+});
+```
+
+它的作用是重写Symbol.toStringTag，截取date（虽然是内置对象，但是仍然属于Object）的`Object.prototype.toString`的输出，让这个对象输出自己修改后的`[object Date]`。
+
+**但是，仅仅是做到输出的时候变成了Date，实际上内部的`internal slot`值并没有被改变**，因此仍然不被认为是Date
 
 ## 如何快速判断是否继承？
 
