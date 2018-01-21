@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      从浏览器多进程到JS单线程，JS运行机制的一次系统梳理
+title:      从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理
 category: blog
 tags: javascript运行机制 javascript
 favour: javascript运行机制
