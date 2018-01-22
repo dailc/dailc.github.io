@@ -231,7 +231,7 @@ __tips__
         
 4. 定时触发器线程
 
-    - 传说中的`setInternal`与`setTimeout`所在线程
+    - 传说中的`setInterval`与`setTimeout`所在线程
     
     - 浏览器定时计数器并不是由JavaScript引擎计数的,（因为JavaScript引擎是单线程的, 如果处于阻塞线程状态就会影响记计时的准确）
     
@@ -376,6 +376,10 @@ Web Worker为Web内容在后台线程中运行脚本提供了一种简单的方�
 所有详细步骤都已经略去，渲染完毕后就是`load`事件了，之后就是自己的JS逻辑处理了
 
 既然略去了一些详细的步骤，那么就提一些可能需要注意的细节把。
+
+这里重绘参考来源中的一张图：（参考来源第一篇）
+
+![](https://dailc.github.io/staticResource/blog/basicKnowledge/singlethreadeventloop/browser_rending.png)
 
 ### load事件与DOMContentLoaded事件的先后
 
