@@ -596,6 +596,8 @@ console.log('begin');
 
 所以，鉴于这么多但问题，目前一般认为的最佳方案是：**用setTimeout模拟setInterval，或者特殊场合直接用requestAnimationFrame**
 
+__补充：JS高程中有提到，JS引擎会对setInterval进行优化，如果当前事件队列中有setInterval的回调，不会重复添加。不过，仍然是有很多问题。。。__
+
 ## 事件循环进阶：macrotask与microtask
 
 这段参考了参考来源中的第2篇文章（英文版的），（加了下自己的理解重新描述了下），

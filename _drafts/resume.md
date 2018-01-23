@@ -73,7 +73,3 @@
 - 熟悉Hybrid模式，架构设计过一个混合开发框架
 - 使用ESLint+类Airbnb的代码规范；使用gulp、webpack、rollup等工具进行前端工程化；使用karma+mocha+chai进行单元测试。
 - 了解Android原生开发；了解一点后台知识
-
-# 致谢
-
-感谢您花时间阅读我的简历，期待能有机会和您共事。
