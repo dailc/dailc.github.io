@@ -227,15 +227,15 @@ function findMedianSortedArrays2(nums1,nums2) {
 
 这种方案的特点是简单，但是复杂度要远远大于寻找k小值算法，以下是在数组长度分别为3000和500000时，两者性能对比。
 
-![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/leetcode/medianOfTwoSortedArray/demo_js_performanceAnalysis_leetcode_medianOfTwoSortedArray_1.png)
+![](https://dailc.github.io/jsfoundation-perfanalysis/staticresource/performanceAnalysis/leetcode/medianOfTwoSortedArray/demo_js_performanceAnalysis_leetcode_medianOfTwoSortedArray_1.png)
 
-![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/leetcode/medianOfTwoSortedArray/demo_js_performanceAnalysis_leetcode_medianOfTwoSortedArray_2.png)
+![](https://dailc.github.io/jsfoundation-perfanalysis/staticresource/performanceAnalysis/leetcode/medianOfTwoSortedArray/demo_js_performanceAnalysis_leetcode_medianOfTwoSortedArray_2.png)
 
 ## 源码
 [https://github.com/dailc/leetcode/tree/master/algorithms/Median-of-Two-Sorted-Arrays](https://github.com/dailc/leetcode/tree/master/algorithms/Median-of-Two-Sorted-Arrays)
 
 ### 性能分析页面地址
-[两个排序数组求中间值性能分析](https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/leetcode/demo_performanceAnalysis_leetcode_medianOfTwoSortedArrays.html)
+[两个排序数组求中间值性能分析](https://dailc.github.io/jsfoundation-perfanalysis/html/performanceAnalysis/leetcode/demo_performanceAnalysis_leetcode_medianOfTwoSortedArrays.html)
 
 ## 原文地址
 原文在我个人博客上面

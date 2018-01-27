@@ -37,7 +37,7 @@ description: 排序算法之桶排序的深入分析研究，包括算法的思�
 5. 合并完之后就是已经排完序的数据
 
 ### 步骤图示
-![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/algorithmSort/demo_js_algorithmSort_bucketSort_1.png)
+![](https://dailc.github.io/jsfoundation-perfanalysis/staticresource/performanceAnalysis/algorithmSort/demo_js_algorithmSort_bucketSort_1.png)
 
 ## 实现代码
 以下分别以JS和Java的实现代码为例
@@ -313,7 +313,7 @@ F'(M) = -1/M + 1/N
 
 #### 图示
 其中，分桶为500时的一个排序结果图示(其中平均排序时间在2-3S，超过了理想模型下的预期时间)
-![](https://dailc.github.io/jsPerformanceAnalysis/staticresource/performanceAnalysis/algorithmSort/demo_js_algorithmSort_bucketSort_2.png)
+![](https://dailc.github.io/jsfoundation-perfanalysis/staticresource/performanceAnalysis/algorithmSort/demo_js_algorithmSort_bucketSort_2.png)
 
 为了探讨是桶排序自身的原因还是JS浏览器环境的局限，所以又单独在Node.js环境下和Java环境下进行分析测试
 
@@ -421,7 +421,7 @@ F'(M) = -1/M + 1/N
 
 ## 示例Demo
 仍然和以前的系列一样，有提供一个浏览器环境下的性能分析示例工具，参考
-[JS几种数组排序方式分析比较](https://dailc.github.io/jsPerformanceAnalysis/html/performanceAnalysis/demo_performanceAnalysis_jsarraySort.html)
+[JS几种数组排序方式分析比较](https://dailc.github.io/jsfoundation-perfanalysis/html/performanceAnalysis/demo_performanceAnalysis_jsarraySort.html)
 
 ## 原文地址
 原文在我个人博客上面

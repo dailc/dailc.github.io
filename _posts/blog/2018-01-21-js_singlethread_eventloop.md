@@ -569,7 +569,7 @@ console.log('begin');
 - 虽然代码的本意是0毫秒后就推入事件队列，但是W3C在HTML标准中规定，规定要求setTimeout中低于4ms的时间间隔算为4ms。
 (不过也有一说是不同浏览器有不同的最小时间设定)
 
-- 就算不等待4秒，就算假设0毫秒就推入事件队列，也会先执行`begin`（因为只有可执行栈内空了后才会主动读取事件队列）
+- 就算不等待4ms，就算假设0毫秒就推入事件队列，也会先执行`begin`（因为只有可执行栈内空了后才会主动读取事件队列）
 
 ### setTimeout而不是setInterval
 
@@ -587,9 +587,10 @@ console.log('begin');
 就会导致定时器代码连续运行好几次，而之间没有间隔。
 就算正常间隔执行，多个setInterval的代码执行时间可能会比预期小（因为代码执行需要一定时间）
 
-- 譬如像iOS的webview,或者Safari等浏览器中都有一个特点，**在滚动的时候是不执行JS的**，
+- ~~譬如像iOS的webview,或者Safari等浏览器中都有一个特点，**在滚动的时候是不执行JS的**，
 如果使用了setInterval，会发现在滚动结束后会执行多次由于滚动不执行JS积攒回调，
-如果回调执行时间过长,就会非常容器造成卡顿问题和一些不可知的错误
+如果回调执行时间过长,就会非常容器造成卡顿问题和一些不可知的错误~~
+（这一块后续有补充，setInterval自带的优化，不会重复添加回调）
 
 - 而且把浏览器最小化显示等操作时，setInterval并不是不执行程序，
 它会把setInterval的回调函数放在队列中，等浏览器窗口再次打开时，一瞬间全部执行时
@@ -660,6 +661,16 @@ setTimeout
 - macrotask：主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
 
 - microtask：Promise，process.nextTick等
+
+
+__补充：在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分。
+
+另外，setImmediate则是规定：在下一次Event Loop（宏任务）时触发（所以它是属于优先级较高的宏任务），
+（Node.js文档中称，setImmediate指定的回调函数，总是排在setTimeout前面），
+所以setImmediate如果嵌套的话，是需要经过多个Loop才能完成的，
+而不会像process.nextTick一样没完没了。
+
+参考：[https://segmentfault.com/q/1010000011914016](https://segmentfault.com/q/1010000011914016)
     
 再根据线程来理解下：
 
@@ -688,12 +699,51 @@ setTimeout
 
 - 官方版本中，是标准的microtask形式
 
-- polyfill，一般都是通过setTimeout模拟的，所以是macrotask形式（目前没见过有能直接模拟microtask，如果确实有，后续会修改这部分）
+- polyfill，一般都是通过setTimeout模拟的，所以是macrotask形式
 
 - 请特别注意这两点区别
 
 注意，有一些浏览器执行结果不一样（因为它们可能把microtask当成macrotask来执行了），
 但是为了简单，这里不描述一些不标准的浏览器下的场景（但记住，有些浏览器可能并不标准）
+
+__20180126补充：使用MutationObserver实现microtask__
+
+MutationObserver可以用来实现microtask
+（它属于microtask，优先级小于Promise，
+一般是Promise不支持时才会这样做）
+
+它是HTML5中的新特性，作用是：监听一个DOM变动，
+当DOM对象树发生任何变动时，Mutation Observer会得到通知
+
+像以前的Vue源码中就是利用它来模拟nextTick的，
+具体原理是，创建一个TextNode并监听内容变化，
+然后要nextTick的时候去改一下这个节点的文本内容，
+如下：（Vue的源码，未修改）
+
+```js
+var counter = 1
+var observer = new MutationObserver(nextTickHandler)
+var textNode = document.createTextNode(String(counter))
+
+observer.observe(textNode, {
+    characterData: true
+})
+timerFunc = () => {
+    counter = (counter + 1) % 2
+    textNode.data = String(counter)
+}
+```
+
+[对应Vue源码链接](https://github.com/vuejs/vue/blob/9cfd63a7d08c1eba029c8bd7463b3047c3347826/src/core/util/env.js#L86-L95)
+
+不过，现在的Vue（2.5+）的nextTick实现移除了MutationObserver的方式（据说是兼容性原因），
+取而代之的是使用MessageChannel
+（当然，默认情况仍然是Promise，不支持才兼容的）。
+
+MessageChannel属于宏任务，优先级是：`setImmediate->MessageChannel->setTimeout`，
+所以Vue（2.5+）内部的nextTick与2.4及之前的实现是不一样的，需要注意下。
+
+这里不展开，可以看下[https://juejin.im/post/5a1af88f5188254a701ec230](https://juejin.im/post/5a1af88f5188254a701ec230)
 
 ## 写在最后的话
 
