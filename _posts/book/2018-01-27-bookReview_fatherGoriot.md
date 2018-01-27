@@ -3,7 +3,7 @@ layout:     post
 category: book
 tags: 读后感 英文读本
 favour: 读后感
-bookType: reading
+bookType: readed
 cover: https://img3.doubanio.com/lpic/s9809976.jpg
 title: 高老头
 title_en: (Father Goriot)
