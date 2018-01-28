@@ -1,7 +1,7 @@
 {% if site.changyan_sid %}
 <div id="duoshuo-container">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="{{ site.url }}{{ page.url }}}" ></div> 
+<div id="SOHUCS" sid="{{ site.changyan_sid }}{{ page.url }}}" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = '{{ site.changyan_appid }}'; 
