@@ -63,7 +63,7 @@
       
 # 开源项目
 
-  - [https://github.com/minirefresh/minirefresh](https://github.com/minirefresh/minirefresh)：一个零依赖，多主题，易拓展的H5下拉刷新组件。star数600+
+  - [https://github.com/minirefresh/minirefresh](https://github.com/minirefresh/minirefresh)：一个零依赖，多主题，易拓展的H5下拉刷新组件。star数700+
   - [https://github.com/quickhybrid/quickhybrid](https://github.com/quickhybrid/quickhybrid)：一款Hybrid模式混合开发框架，通过JSBridge提供核心Android、iOS功能。多平台API支撑，部分兼容浏览器
 
 # 技术能力
