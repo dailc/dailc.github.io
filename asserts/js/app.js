@@ -502,6 +502,12 @@
 				return
 			};
 			selector = app.dom.getDom(selector);
+			
+			// 兼容Body
+			if (selector === document.body) {
+			    // 有时候body无法操作
+			    selector = document.documentElement;
+			}
 			if(options.display) {
 				//如果是与display显示有关
 				if(options.display === 'hide' || options.display === 'none') {
