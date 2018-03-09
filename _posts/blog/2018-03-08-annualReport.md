@@ -172,4 +172,4 @@ description: 2017年年终总结，收获，以及未来畅想。
 
 原文在我个人博客上面
 
-[2017年终总结、随想](https://dailc.github.io/2018/03/08/annualReport.html)
+[2017年终总结、随想](http://www.dailichun.com/2018/03/08/annualReport.html)
