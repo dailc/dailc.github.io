@@ -114,18 +114,13 @@ height: 100%
 但是height这种是基于父元素的高度的
 ```
 
-如何自适应正方形？（基于body） :
+如何自适应正方形？（padding是基于宽度的） :
 
 ```js
 .parent {
     background: red;
     width: 100%;
-    height: 100vw;
-    /*
-     * 或者
-     height:0;
-     padding-bottom: 100%;
-     */
+    padding-bottom: 100%;
 }
 ```
 
@@ -200,7 +195,7 @@ Promise.resolve().then，mictask直接添加这个任务（顺序比下一次the
 
 - Promise.resolve生成一个解析特定值后的promise对象
 
-- 顺序为，先将Promise.resolve().then加入mictask，然后return后再讲resolve对应的then加入mictask
+- 顺序为，先将Promise.resolve().then加入mictask，然后函数执行完毕后，then时才会将resolve转换为promise，加入mictask
 
 - 第6问：同源策略
 
