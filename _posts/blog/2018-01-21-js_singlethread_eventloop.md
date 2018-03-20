@@ -740,7 +740,7 @@ timerFunc = () => {
 取而代之的是使用MessageChannel
 （当然，默认情况仍然是Promise，不支持才兼容的）。
 
-MessageChannel属于宏任务，优先级是：`setImmediate->MessageChannel->setTimeout`，
+MessageChannel属于宏任务，优先级是：`MessageChannel->setTimeout`，
 所以Vue（2.5+）内部的nextTick与2.4及之前的实现是不一样的，需要注意下。
 
 这里不展开，可以看下[https://juejin.im/post/5a1af88f5188254a701ec230](https://juejin.im/post/5a1af88f5188254a701ec230)

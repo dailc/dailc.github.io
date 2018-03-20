@@ -575,9 +575,15 @@ Remote Address: 请求的远程服务器地址（会转为IP）
 
 ```js
 HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法。
+以及几种Additional Request Methods：PUT、DELETE、LINK、UNLINK
 
-HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
+HTTP1.1定义了八种请求方法：GET、POST、HEAD、OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
 ```
+
+`HTTP 1.0`定义参考：[https://tools.ietf.org/html/rfc1945](https://tools.ietf.org/html/rfc1945)
+
+`HTTP 1.1`定义参考：[https://tools.ietf.org/html/rfc2616](https://tools.ietf.org/html/rfc2616)
+
 
 这里面最常用到的就是状态码，很多时候都是通过状态码来判断，如（列举几个最常见的）：
 
