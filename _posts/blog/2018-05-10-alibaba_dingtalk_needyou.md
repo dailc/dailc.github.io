@@ -33,10 +33,6 @@ description: 大量的HC与优渥的薪资，心动不如行动。来吧，骚�
 
 ### 另外
 
-另外还有校招岗位噢！
-
-如果觉得自己的基础很不多，也可以试试。
-
 最后，所有的投递，正式内推之前我都会预沟通的
 （也就是说，只有过了我这一关才能进入正式的内推流程噢，别紧张，我只会随意聊一聊，大牛请忽略~）
 
@@ -66,3 +62,18 @@ _ps：薪资肯定是最后才谈得，能进入这个环节都不必担心。_
 `lichun.dlc@alibaba-inc.com`
 
 另外，也可以在各大博客、网站或github上给我留言，看见会及时回复！
+
+## 校招
+
+做好期望你是：
+
+- 基础好（计算机基础、前端基础）
+
+- 自驱性、学习能力强
+
+- 尽量多的契合招聘要求哈
+
+![https://dailc.github.io/staticResource/dingtalk_student_2019.png](https://dailc.github.io/staticResource/dingtalk_student_2019.png)
+
+
+[http://alibaba.tupu360.com/campusActivity/getActivityInfo?activityCode=BtI%2F2x6b25TPqlrlMtmUT1oFVCsSOODeg9iPRMnW520%3D](http://alibaba.tupu360.com/campusActivity/getActivityInfo?activityCode=BtI%2F2x6b25TPqlrlMtmUT1oFVCsSOODeg9iPRMnW520%3D)
